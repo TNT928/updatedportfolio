@@ -1,0 +1,10 @@
+.header{
+    background-color: rgb(45, 43, 43) !important;
+    position: sticky!important;
+}
+
+.link{
+    color: white!important;
+    text-decoration: none;
+}
+
