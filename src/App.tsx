@@ -9,6 +9,7 @@ import {
   Route,
   BrowserRouter,
   useLocation,
+  HashRouter,
 } from "react-router-dom";
 import About from "./Pages/about";
 import Projects from "./Pages/projects";
@@ -17,7 +18,7 @@ import Home from "./Pages/home";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       {" "}
       <div className="App">
         <Header />
@@ -28,7 +29,7 @@ function App() {
           <Route path='contact' element={<Contact/>}/>
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
