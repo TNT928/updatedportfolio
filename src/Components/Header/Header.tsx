@@ -13,8 +13,8 @@ const Header = () => {
     <div>
          <Navbar expand="lg" className={styles.header} expanded={expanded}>
       <Container>
-        <Navbar.Brand href="#" className={styles.link}><Link to="/" className={styles.link}>Michael VanderLoon</Link></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(true)} />
+        <Navbar.Brand href="#" className={styles.link}><Link to="/" className={styles.link} onClick={() => setExpanded(false)}>Michael VanderLoon</Link></Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
         <Navbar.Collapse  className="justify-content-end">
             <Nav></Nav>
           <Nav className="ms-auto" >
