@@ -10,7 +10,7 @@ import styles from './Header.module.css'
 const Header = () => {
   return (
     <div>
-         <Navbar expand="lg" className={styles.header} >
+         <Navbar expand="lg" className={styles.header} collapseOnSelect={true}>
       <Container>
         <Navbar.Brand href="#" className={styles.link}><Link to="/" className={styles.link}>Michael VanderLoon</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -18,8 +18,8 @@ const Header = () => {
             <Nav></Nav>
           <Nav className="ms-auto" >
             <Nav.Link href="#"><Link to="/" className={styles.link}>Home</Link></Nav.Link>
-            <Nav.Link href="#"><Link to="/projects" className={styles.link}>Projects</Link></Nav.Link>
-            <Nav.Link href="#"><Link to="/about" className={styles.link}>About</Link></Nav.Link>
+            <Nav.Link href="#"><Link to="projects" className={styles.link}>Projects</Link></Nav.Link>
+            <Nav.Link href="#"><Link to="about" className={styles.link}>About</Link></Nav.Link>
          
           </Nav>
         </Navbar.Collapse>
