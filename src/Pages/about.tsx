@@ -4,10 +4,11 @@ import styles from "../CSS/about.module.css";
 const About = () => {
   return (
     <div className={styles.wrapper}>
-      {/* <div className={styles.overlay}> */}
+
         <h1 className={styles.header}>About Me</h1>
         <div className={styles.aboutContent}>
-          <div className={styles.containerImage}> <img
+          <div className={styles.containerImage}> 
+          <img
             src="Images\IMG_7844.jpg"
             className={`${styles.profileImage} animate__animated animate__zoomIn`}
           /></div>
@@ -30,11 +31,12 @@ const About = () => {
             working on perfecting my craft and continuing to expand my knowledge
             at a company called 3Nom, who took a chance on me when no one else
             would.
-          </p></div>
+          </p>
+          </div>
          
         </div>
       </div>
-    // </div>
+
   );
 };
 

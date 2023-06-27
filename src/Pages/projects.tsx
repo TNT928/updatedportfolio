@@ -73,16 +73,16 @@ const Projects = () => {
   return (
     <div className={styles.wrapper}>
      
-      {/* <div className={styles.overlay}> */}
+ 
            <h1 style={{textAlign:"center", color:'white', marginTop:'2em'}}>My Projects</h1>
-      {/* <h1 style={{textAlign:"center", color:"white", }}>Projects</h1> */}
+      
           <div className={styles.scrollableContainer}>
             {projects.map((site: any) => (
               <div
                 className={`${styles.project} animate__animated animate__fadeIn`}
               >
                 <h3>{site.name}</h3>
-                <img src={site.image} style={{ width: "300px" }} />
+                <img src={site.image}  />
                 <p>Built Using: {site.builtWith}</p>
 
                 <Button variant="secondary" className={styles.linkBtn}>
@@ -96,31 +96,7 @@ const Projects = () => {
             
           </div>
         </div>
-      // </div>
-   
-    // <div className={styles.wrapper}>
-    //   <div className={styles.overlay}>
-    //     <div className={styles.bodyWrapper}>
-    //       <div className={styles.container}>
-    //         {projects.map((site: any) => (
-    //           <div
-    //             className={`${styles.project} animate__animated animate__fadeIn`}
-    //           >
-    //             <h3>{site.name}</h3>
-    //             <img src={site.image} style={{ width: "300px" }} />
-    //             <p>Built Using: {site.builtWith}</p>
-
-    //             <Button variant="secondary" className={styles.linkBtn}>
-    //               <a href={site.link} target="_blank" className={styles.link}>
-    //                 See the site
-    //               </a>
-    //             </Button>
-    //           </div>
-    //         ))}
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
+ 
   );
 };
 

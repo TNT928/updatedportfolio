@@ -1,15 +1,15 @@
-.bodyWrapper{
+/* .bodyWrapper{
     display: flex;
-    /* margin: 10em auto; */
-    /* width: 75%; */
-    width: 100%;
+ 
+    width: 75%;
     flex-direction: column;
 height: 100%;
-margin: 0 auto;
+margin: 50px auto;
 color: white;
 font-weight: bold;
 font-family: 'Roboto', sans-serif;
-    /* height: 1000px; */
+text-align: center;
+
     
 }
 
@@ -45,8 +45,8 @@ font-family: 'Roboto', sans-serif;
 
 .profileImage{
     width: 300px;
-    height: 300px;
-    border-radius: 50%;
+    max-width: 100%;
+ 
 }
 
 @media (min-width:768px){
@@ -61,5 +61,47 @@ font-family: 'Roboto', sans-serif;
     .bodyWrapper{
         flex-direction: row;
         width: 75%;
+    }
+} */
+
+.profileImage{
+    margin-top: 30px;
+    width: 300px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 6px 3px white;
+}
+
+.bodyWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.text{
+    margin-top: 30px;
+}
+
+@media (min-width:768px) {
+    .bodyWrapper{
+        width: 75%;
+    margin: 115px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    }
+
+    .rightSide{
+        width: 50%;
+        margin: 15px;
+    }
+
+    .leftSide{
+        width: 50%;
+        margin: 15px;
     }
 }
