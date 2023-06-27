@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -8,18 +8,19 @@ import styles from './Header.module.css'
 
 
 const Header = () => {
+  const [expanded, setExpanded] = useState(false)
   return (
     <div>
-         <Navbar expand="lg" className={styles.header} collapseOnSelect={true}>
+         <Navbar expand="lg" className={styles.header} expanded={expanded}>
       <Container>
         <Navbar.Brand href="#" className={styles.link}><Link to="/" className={styles.link}>Michael VanderLoon</Link></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(true)} />
         <Navbar.Collapse  className="justify-content-end">
             <Nav></Nav>
           <Nav className="ms-auto" >
-            <Nav.Link href="#"><Link to="/" className={styles.link}>Home</Link></Nav.Link>
-            <Nav.Link href="#"><Link to="projects" className={styles.link}>Projects</Link></Nav.Link>
-            <Nav.Link href="#"><Link to="about" className={styles.link}>About</Link></Nav.Link>
+            <Nav.Link href="#"><Link to="/" className={styles.link} onClick={() => setExpanded(false)}>Home</Link></Nav.Link>
+            <Nav.Link href="#"><Link to="projects" className={styles.link} onClick={() => setExpanded(false)}>Projects</Link></Nav.Link>
+            <Nav.Link href="#"><Link to="about" className={styles.link} onClick={() => setExpanded(false)}>About</Link></Nav.Link>
          
           </Nav>
         </Navbar.Collapse>
