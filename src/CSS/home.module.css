@@ -79,6 +79,9 @@ text-align: center;
     text-align: center;
     padding: 20px;
     color: white;
+    height: calc(100vh - 200px);
+    position: relative;
+  margin-top: 60px;
 }
 
 .text{
@@ -92,7 +95,7 @@ text-align: center;
     display: flex;
     flex-direction: row;
     align-items: center;
-
+    height: calc(100vh - 200px);
     }
 
     .rightSide{
