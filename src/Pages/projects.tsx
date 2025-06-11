@@ -5,70 +5,22 @@ import "animate.css";
 
 const Projects = () => {
   const projects = [
-    {
-      name: "Agudah",
-      image: "Images/projectImages/agudah.png",
-      builtWith: "NextJs, HTML, CSS, Redux",
-      link: "https://agudaharchive.org/",
-    },
-    {
-      name: "Lamayim",
-      image: "Images/projectImages/lamayim.png",
-      builtWith: "Shopify",
-      link: "https://lamayim.com/",
-    },
-    {
-      name: "EmiYoshi",
-      image: "Images/projectImages/emiyoshi.png",
-      builtWith: "ReactJS, HTML, CSS, Zustand",
-
-      link: "https://emiyoshi.com/",
-    },
-    {
-      name: "ThankYouRebbi",
-      image: "Images/projectImages/thankyourebbi.png",
-      builtWith: "ReactJS, HTML, CSS, Context Api",
-      link: "https://thankyourebbi.com/",
-    },
-    {
-      name: "TLC Financing",
-      image: "Images/projectImages/TLC.png",
-      builtWith: "NextJs, HTML, CSS, Redux",
-      link: "https://app.tlcfinancing.com/",
-    },
-    {
-      name: "Marine Elements",
-      image: "Images/projectImages/marineelements.png",
-      builtWith: "Shopify",
-
-      link: "https://marinelements.com/",
-    },
-    {
-      name: "Model Dinners",
-      image: "Images/projectImages/modeldinners.png",
-      builtWith: "HTML, CSS, Javascript",
-      link: "https://modeldinners.com/",
-    },
-    {
-      name: "Open Roads",
-      image: "Images/projectImages/openroad.png",
-      builtWith: "Angular, HTML, CSS",
-      link: "https://tnt928.github.io/Angular_Final_Project/",
-    },
-    {
-      name: "MK Lashes",
-      image: "Images/projectImages/mklashes.png",
-      builtWith: "Wordpress",
-      link: "https://mk-lashes.com/",
-    },
-    {
-      name: "Memory Game",
-      image: "Images/projectImages/memory.png",
-      builtWith: "HTML, CSS, Javascript",
-      link: "https://tnt928.github.io/MemoryGame/",
-    },
-   
-  ];
+  {
+    name: "After Effects Demo",
+    vimeoId: "1092567274",
+    builtWith: "Adobe After Effects",
+  },
+  {
+    name: "Final Cut Pro",
+    vimeoId: "1092570276",
+    builtWith: "Final Cut Pro, Apple Motion",
+  },
+  {
+    name: "Final Cut Pro",
+    vimeoId: "1092573026",
+    builtWith: "Final Cut Pro, Apple Motion",
+  },
+];
 
   return (
     <div className={styles.wrapper}>
@@ -82,14 +34,18 @@ const Projects = () => {
                 className={`${styles.project} animate__animated animate__fadeIn`}
               >
                 <h3>{site.name}</h3>
-                <img src={site.image}  />
+                <iframe
+  src={`https://player.vimeo.com/video/${site.vimeoId}`}
+  width="640"
+  height="360"
+  frameBorder="0"
+  allow="autoplay; fullscreen; picture-in-picture"
+  allowFullScreen
+  title="Vimeo Video"
+/>
                 <p>Built Using: {site.builtWith}</p>
 
-                <Button variant="secondary" className={styles.linkBtn}>
-                  <a href={site.link} target="_blank" className={styles.link}>
-                    See the site
-                  </a>
-                </Button>
+            
               </div>
             ))}
 
