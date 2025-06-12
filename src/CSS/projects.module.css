@@ -66,17 +66,25 @@
 }
 
 
+.project h3{
+  font-weight: bold;
+  font-family: cursive;
+  color: rgb(210, 247, 26);
+}
+
 @media (min-width:768px) {
   .scrollableContainer{
     display: flex;
-    height: 100vh;
+    /* height: 100vh; */
     justify-content: center;
     flex-wrap: wrap;
+
     
   }
 
   .project{
-    height: 300px;
+    height: auto;
+    margin-bottom: 5rem;
   }
 
   .video{

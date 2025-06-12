@@ -13,15 +13,15 @@ const Projects = () => {
     {
       name: 'Premiere Pro Preset Transitions',
       vimeoId: '1092827895',
-      builtWith: 'Final Cut Pro, Apple Motion'
+      builtWith: 'Adobe Premiere Pro'
     },
     {
-      name: 'Final Cut Pro',
+      name: 'Final Cut Pro Demo W Voice Over',
       vimeoId: '1092570276',
       builtWith: 'Final Cut Pro, Apple Motion'
     },
     {
-      name: 'Final Cut Pro',
+      name: 'Final Cut Pro Demo',
       vimeoId: '1092573026',
       builtWith: 'Final Cut Pro, Apple Motion'
     },
