@@ -5,8 +5,8 @@ const Home = () => {
   return (
  
       <div className={styles.bodyWrapper}>
-        <div className={styles.rightSide}>
-          <h1>Michael VanderLoon</h1>
+        <div className={`${styles.rightSide} animate__animated animate__zoomIn`}>
+          <h1 className={styles.header}>Michael VanderLoon</h1>
           <h3 >Video Editor</h3>
           <h3 style={{textAlign:"center"}} className={styles.text}>
            I’m a creative video editor and motion designer with a passion for storytelling, pacing, and polished visuals. I specialize in editing engaging content for YouTube, social media, branded campaigns, and cinematic pieces using Adobe Premiere Pro, After Effects, Apple Motion and Final Cut Pro.

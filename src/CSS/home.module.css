@@ -1,106 +1,50 @@
-/* .bodyWrapper{
+.header{
+     font-family: 'Bungee Tint';
+  font-optical-sizing: auto;
+  font-size: clamp(3rem, 5vw, 3.5rem);
+
+  font-style: normal;
+  margin-bottom: 4rem;
+}
+
+
+.bodyWrapper{
     display: flex;
- 
-    width: 75%;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
     flex-direction: column;
-height: 100%;
-margin: 50px auto;
-color: white;
-font-weight: bold;
-font-family: 'Roboto', sans-serif;
-text-align: center;
-
-    
-}
-
-
-.overlay{
-    position: absolute;
-    height: 100%;
-    background-color: rgb(0 0 0 / 35%);
-}
-
-.wrapper{
-    height: 100vh;
-    background-image: url('../../public/Images/trails-7228378_1280.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.leftSide{
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    margin-top: 6rem;
+   
 }
 
 .rightSide{
-
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.profileImage{
-    width: 300px;
-    max-width: 100%;
- 
-}
-
-@media (min-width:768px){
-    .rightSide{
-        width: 50%;
-    }
-
-    .leftSide{
-        width: 50%;
-    }
-
-    .bodyWrapper{
-        flex-direction: row;
-        width: 75%;
-    }
-} */
-
-*{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight:bolder;
-}
-
-.profileImage{
-    margin-top: 30px;
-    /* width: 300px; */
-    max-width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 0 6px 3px white;
-}
-
-.bodyWrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 20px;
-    color: white;
-    height: calc(100vh - 200px);
-    position: relative;
-  margin-top: 60px;
+   padding: 40px;
 }
 
-.text{
-    margin-top: 30px;
+.profileImage{
+    width: 100%;
+    border-radius: 60px;
+    box-shadow: 6px 6px 6px 6px solid white;
+    
+    padding: 40px;
 }
 
 @media (min-width:768px) {
     .bodyWrapper{
-        width: 75%;
-    margin: 115px auto;
-    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    /* display: flex;
     flex-direction: row;
     align-items: center;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 200px); */
     }
 
     .rightSide{
@@ -112,4 +56,4 @@ text-align: center;
         width: 50%;
         margin: 15px;
     }
-}
+} 

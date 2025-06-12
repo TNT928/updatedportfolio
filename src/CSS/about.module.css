@@ -1,4 +1,4 @@
-
+/* 
   .profileImage{
     height: 400px;
     margin-top: 30px;
@@ -66,4 +66,56 @@ position: relative;
     
     }
   }
+   */
+
+   .wrapper{
+    display: flex;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    margin-top: 6rem;
+   
+}
+
+.profileImage{
+    width: 100%;
+    border-radius: 60px;
+    box-shadow: 6px 6px 6px 6px solid white;
+    
+    padding: 40px;
+}
+
+.header{
+     font-family: 'Bungee Tint';
+  font-optical-sizing: auto;
+  font-size: clamp(3rem, 5vw, 3.5rem);
+
+  font-style: normal;
+  margin-bottom: 4rem;
+}
+
+.aboutContent{
+  padding: 30px;
+}
+
+@media (min-width:768px) {
+
+  .aboutContent{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+  }
+
+  .text{
+    width: 50%;
+  }
+
+  .profileImage{
+    width: 500px;
+  }
+
+
   
+}
