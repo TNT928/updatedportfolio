@@ -16,6 +16,16 @@ const Projects = () => {
       builtWith: 'Adobe Premiere Pro'
     },
     {
+      name: 'Custom Titles',
+      youtubeId: 'UrehPGycQRQ?si=cAtm4KJiu5PKN9Wv',
+      builtWith: 'Adobe Premiere Pro, After Effects'
+    },
+    {
+      name: 'Mobile Demo',
+      youtubeId: 'xiEUKV18Llw?si=AXeg6VOk_nP4xD9v',
+      builtWith: 'Adobe Premiere Pro, After Effects'
+    },
+    {
       name: 'Final Cut Pro Demo W Voice Over',
       vimeoId: '1092570276',
       builtWith: 'Final Cut Pro, Apple Motion'
@@ -43,7 +53,7 @@ const Projects = () => {
             <h3>
               {site.name}
             </h3>
-            <iframe
+           { site.vimeoId ? <iframe
               className={styles.video}
               src={`https://player.vimeo.com/video/${site.vimeoId}`}
               // width="640"
@@ -52,7 +62,18 @@ const Projects = () => {
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
               title="Vimeo Video"
+            /> : <iframe
+              className={styles.video}
+              src={`https://www.youtube.com/embed/${site.youtubeId}`}
+              // width="640"
+              // height="360"
+              frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            title="YouTube video player" 
             />
+            
+            }
             <p>
               Built Using: {site.builtWith}
             </p>
