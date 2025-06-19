@@ -17,12 +17,12 @@ const Projects = () => {
     },
     {
       name: 'Custom Titles',
-      youtubeId: 'UrehPGycQRQ?si=cAtm4KJiu5PKN9Wv',
+      vimeoId: '1094691042?h=daea667b00',
       builtWith: 'Adobe Premiere Pro, After Effects'
     },
     {
       name: 'Mobile Demo',
-      youtubeId: 'xiEUKV18Llw?si=AXeg6VOk_nP4xD9v',
+      vimeoId: '1094691093?h=2d4a960051',
       builtWith: 'Adobe Premiere Pro, After Effects'
     },
     {
