@@ -26,6 +26,11 @@ const Projects = () => {
       builtWith: 'Adobe Premiere Pro, After Effects'
     },
     {
+      name: 'After Effects advertisement',
+      vimeoId: '1095566897?h=9325ca1985',
+      builtWith: 'Adobe Premiere Pro, After Effects'
+    },
+    {
       name: 'Final Cut Pro Demo W Voice Over',
       vimeoId: '1092570276',
       builtWith: 'Final Cut Pro, Apple Motion'
