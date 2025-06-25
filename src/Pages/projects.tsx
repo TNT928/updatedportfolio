@@ -26,6 +26,21 @@ const Projects = () => {
       builtWith: 'Adobe Premiere Pro, After Effects'
     },
     {
+      name: 'Tiktok / Youtube Shorts',
+      youtubeId: 'GmiugZnjrTk',
+      builtWith: 'After Effects'
+    },
+    {
+      name: 'Tiktok / Youtube Shorts',
+      youtubeId: '2C_jN_Dvbvo',
+      builtWith: 'Adobe Premiere Pro, After Effects'
+    },
+    {
+      name: 'Tiktok / Youtube Shorts',
+      youtubeId: 'NjIQsBgfi2Q',
+      builtWith: 'After Effects'
+    },
+    {
       name: 'After Effects advertisement',
       vimeoId: '1095566897?h=9325ca1985',
       builtWith: 'Adobe Premiere Pro, After Effects'
@@ -70,7 +85,7 @@ const Projects = () => {
             /> : <iframe
               className={styles.video}
               src={`https://www.youtube.com/embed/${site.youtubeId}`}
-              // width="640"
+              width="300"
               // height="360"
               frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
