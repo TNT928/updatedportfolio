@@ -37,6 +37,11 @@ const Projects = () => {
     },
     {
       name: 'Tiktok / Youtube Shorts',
+      youtubeId: 'duptNx1UyRU',
+      builtWith: 'Adobe Premiere Pro, After Effects'
+    },
+    {
+      name: 'Tiktok / Youtube Shorts',
       youtubeId: 'NjIQsBgfi2Q',
       builtWith: 'After Effects'
     },
