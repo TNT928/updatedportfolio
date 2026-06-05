@@ -10,17 +10,17 @@ const Services = () => {
     },
     {
       title: "Lighting Design",
-      description: "Crafting atmospheric, high-contrast, and standard three-point lighting setups to shape depth and mood on set.",
+      description: "Crafting atmospheric lighting to shape depth and mood on set.",
       icon: "💡"
     },
     {
       title: "Sound & Audio Editing",
-      description: "Crisp dialogue leveling, background noise reduction, ambient soundscape design, and pristine microphone configuration.",
+      description: "Crisp dialogue leveling, background noise cleanup, EQ, and getting your microphone dialed in perfectly.",
       icon: "🎙️"
     },
     {
       title: "Video Editing",
-      description: "Pacing, narrative assembly, and tight cutting to turn raw footage into compelling stories.",
+      description: "Finding the right pacing and assembly to turn messy raw footage into a polished, compelling video.",
       icon: "🎬"
     },
     {
