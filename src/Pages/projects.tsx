@@ -11,6 +11,11 @@ const Projects = () => {
       builtWith: 'Adobe After Effects'
     },
     {
+      name: 'After Effects Demo',
+      vimeoId: '1100987036',
+      builtWith: 'Adobe After Effects'
+    },
+    {
       name: 'Premiere Pro Preset Transitions',
       vimeoId: '1093280132',
       builtWith: 'Adobe Premiere Pro'
@@ -39,6 +44,16 @@ const Projects = () => {
       name: 'Tiktok / Youtube Shorts',
       youtubeId: 'duptNx1UyRU',
       builtWith: 'Adobe Premiere Pro, After Effects'
+    },
+    {
+      name: 'Detective Skit',
+      youtubeId: 'd_lPn4BcXEE',
+      builtWith: 'Final Cut Pro'
+    },
+    {
+      name: 'Wolf Lake Park Photography',
+      youtubeId: 'jPz4JbUM-UE',
+      builtWith: 'Final Cut Pro'
     },
     {
       name: 'Tiktok / Youtube Shorts',
