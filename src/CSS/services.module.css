@@ -1,0 +1,112 @@
+.wrapper {
+  background: radial-gradient(circle at center, #1a1e24 0%, #0a0c0e 100%);
+  min-height: 100vh; /* Forces the background to take up at least 100% of the screen height */
+  margin: 0;
+  padding: 80px 20px;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+}
+
+.headerSection {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #ffffff 30%, #a3b3cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #7b8999;
+  font-weight: 400;
+}
+
+.accentLine {
+  width: 50px;
+  height: 4px;
+  background: #3b82f6; /* Electric production blue glow line */
+  margin: 24px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+}
+
+/* The magic layout that fixes the single vertical line issue */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 10px 0;
+}
+
+/* Dark, translucent production-style cards */
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 40px 30px;
+  backdrop-filter: blur(8px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* High-tech hover state */
+.card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+              0 0 20px rgba(59, 130, 246, 0.05);
+}
+
+.iconBox {
+  font-size: 2.2rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.cardTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #f3f4f6;
+  letter-spacing: -0.2px;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #9ca3af;
+}
+
+/* Clean mobile collapse */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .wrapper {
+    padding: 50px 16px;
+  }
+}

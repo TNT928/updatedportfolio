@@ -1,96 +1,121 @@
-/* 
-
-.project {
+.wrapper {
+  background: radial-gradient(circle at center, #1a1e24 0%, #0a0c0e 100%);
+  min-height: 100vh;
+  color: #ffffff;
+  padding: 100px 20px 80px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.headerSection {
   text-align: center;
-  margin: 20px;
-  color: white;
-
+  margin-bottom: 60px;
 }
 
-.link {
-  color: white;
-  text-decoration: none;
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #ffffff 30%, #a3b3cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.scrollableContainer{
-  height: 600px;
-  overflow-y: auto;
-  margin: 0 auto; 
-  display: flex;
-  flex-direction: column;
+.subtitle {
+  font-size: 1.1rem;
+  color: #7b8999;
 }
 
-@media (min-width:768px) {
-  .scrollableContainer{
-    flex-direction: row;
-    height: calc(100vh - 300px);
-    justify-content: center;
-    flex-wrap: wrap;
+.accentLine {
+  width: 60px;
+  height: 4px;
+  background: #3b82f6;
+  margin: 24px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+}
 
+/* 3-Column Responsive Grid Area Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+/* Translucent Production Glass Display Card */
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden; /* Clips iframe corners to fit the card borders */
+  backdrop-filter: blur(8px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* The 16:9 Aspect Ratio Lock Box */
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio Math formula */
+  background: #000000;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.cardContent {
+  padding: 24px 20px;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #f3f4f6;
+  letter-spacing: -0.2px;
+}
+
+.tagLine {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.tagLabel {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+/* Mobile Layout Collapse Optimization Rules */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.3rem;
   }
-  .scrollableContainer::-webkit-scrollbar {
-    display: none;
+  .grid {
+    grid-template-columns: 1fr; /* Stacks to single items on small phones */
+    gap: 20px;
   }
-
-}
- */
-
- .video{
-    /* width: 100%; */
-  margin: 30px;
-    padding: 0;
-    /* height: 300px; */
- }
- .wrapper{
-    display: flex;
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: white;
-    flex-direction: column;
-    margin-top: 6rem;
-   
-}
-
-
-.header{
- font-family: 'Bungee Tint';
-  font-optical-sizing: auto;
-  font-size: 4rem;
-
-  font-style: normal;
-  /* font-variation-settings:
-    "wdth" 100,
-    "YTLC" 500; */
-}
-
-
-.project h3{
-  font-weight: bold;
-  font-family: cursive;
-  color: rgb(210, 247, 26);
-}
-
-@media (min-width:768px) {
-  .scrollableContainer{
-    display: flex;
-    /* height: 100vh; */
-    justify-content: center;
-    flex-wrap: wrap;
-
-    
-  }
-
-  .project{
-    height: auto;
-    margin-bottom: 5rem;
-  }
-
-  .video{
-    margin: 30px;
-    padding: 0;
-    height: 300px;
-    width: 500px;
+  .wrapper {
+    padding: 60px 16px;
   }
 }

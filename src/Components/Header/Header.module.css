@@ -1,10 +1,68 @@
-.header{
-    background-color: rgb(45, 43, 43) !important;
-    position: sticky!important;
+/* Translucent Dark Studio Navigation Header Frame */
+.header {
+  background: rgba(10, 12, 14, 0.7) !important; /* Translucent pitch black */
+  backdrop-filter: blur(12px); /* Premium dark glass look */
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 18px 0;
+  transition: all 0.3s ease;
 }
 
-.link{
-    color: white!important;
-    text-decoration: none;
+/* Main Brand Logo Link Setup */
+.brandLink {
+  color: #ffffff !important;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
+.brandLink:hover {
+  color: #3b82f6 !important; /* Glows your signature brand blue on hover */
+}
+
+/* Navigation Menu Item Typography Links */
+.navLink {
+  color: #9ca3af !important; /* Muted tech gray */
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 8px 16px !important;
+  transition: all 0.2s ease;
+  letter-spacing: 0.2px;
+}
+
+/* High-tech Hover State for Nav Items */
+.navLink:hover {
+  color: #ffffff !important; /* Illuminates fully white */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Custom Overrides to make the standard Bootstrap Hamburger Icon clean white */
+.customToggler {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  padding: 6px 10px !important;
+}
+
+.customToggler :global(.navbar-toggler-icon) {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+.customToggler:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important; /* Electric blue ring focus box */
+  outline: none !important;
+}
+
+/* Mobile Responsive Backdrop Adjustments */
+@media (max-width: 991px) {
+  .header {
+    padding: 12px 0;
+  }
+  
+  /* Creates a clean stack alignment drop-down on mobile phones */
+  .navLink {
+    padding: 12px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  }
+}

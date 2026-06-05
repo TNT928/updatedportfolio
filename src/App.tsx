@@ -15,6 +15,7 @@ import About from "./Pages/about";
 import Projects from "./Pages/projects";
 import Contact from "./Pages/contact";
 import Home from "./Pages/home";
+import Services from "./Pages/services";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path='about' element={<About/>}/>
           <Route path='projects' element={<Projects/>}/>
           <Route path='contact' element={<Contact/>}/>
+          <Route path='services' element={<Services/>}/>
         </Routes>
       </div>
     </HashRouter>

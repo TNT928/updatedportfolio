@@ -1,27 +1,52 @@
 import React from "react";
 import styles from "../CSS/home.module.css";
+import "animate.css";
 
 const Home = () => {
   return (
- 
+    <div className={styles.wrapper}>
       <div className={styles.bodyWrapper}>
-        <div className={`${styles.rightSide} animate__animated animate__zoomIn`}>
+        
+        {/* Left Column: Text & Branding Info */}
+        <div className={`${styles.leftSide} animate__animated animate__zoomIn`}>
           <h1 className={styles.header}>Michael VanderLoon</h1>
-          <h3 >Video Editor</h3>
-          <h3 style={{textAlign:"center"}} className={styles.text}>
-           I’m a creative video editor and motion designer with a passion for storytelling, pacing, and polished visuals. I specialize in editing engaging content for YouTube, social media, branded campaigns, and cinematic pieces using Adobe Premiere Pro, After Effects, Apple Motion and Final Cut Pro.
-          </h3>
-          <h3>To see my youtube channel please visit this link <br></br><a href="http://www.youtube.com/@ShowtimeandJoysticks">Showtime and Joysticks</a></h3>
-        </div>
-        <div className={styles.leftSide}>
-          <img
-            src="Images\Me_in_hat.jpg"
+          <h2 className={styles.subheader}>Video Editor & Content Creator</h2>
+          <div className={styles.accentLine}></div>
           
-            className={`${styles.profileImage} animate__animated animate__fadeIn`}
-          />
+          <p className={styles.text}>
+            I’m a creative video editor and motion designer with a passion for storytelling, 
+            pacing, and polished visuals. I specialize in editing engaging content for YouTube, 
+            social media, branded campaigns, and cinematic pieces using Adobe Premiere Pro, 
+            After Effects, Apple Motion, and Final Cut Pro.
+          </p>
+          
+          <div className={styles.linkContainer}>
+            <p className={styles.linkLabel}>Check out my content portfolio:</p>
+            <a 
+              href="https://www.youtube.com/@ShowtimeandJoysticks" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className={styles.youtubeLink}
+            >
+              🎥 Showtime and Joysticks
+            </a>
+          </div>
         </div>
+
+        {/* Right Column: Profile Image */}
+        <div className={styles.rightSide}>
+          <div className={styles.imageFrame}>
+            {/* Standardized path with forward slashes */}
+            <img
+              src="Images/Me_in_hat.jpg"
+              alt="Michael VanderLoon"
+              className={`${styles.profileImage} animate__animated animate__fadeIn`}
+            />
+          </div>
+        </div>
+
       </div>
-    
+    </div>
   );
 };
 

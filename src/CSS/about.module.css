@@ -1,121 +1,133 @@
-/* 
-  .profileImage{
-    height: 400px;
-    margin-top: 30px;
-  }
+.wrapper {
+  background: radial-gradient(circle at center, #1a1e24 0%, #0a0c0e 100%);
+  min-height: 100vh;
+  color: #ffffff;
+  padding: 100px 20px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
 
-  .wrapper{
-    position: relative;
-    width: 100%;
+.container {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
 
-  }
-  
-  .link {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .aboutContent{
-    height: 600px;
-    overflow-y: auto;
-    margin: 0 auto; 
-    display: flex;
+/* Image Column Layout */
+.imageColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.containerImage {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.profileImage {
+  max-width: 340px;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+/* Text & Content Column Layout */
+.textColumn {
+  flex: 1.3;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 0 0 10px 0;
+  background: linear-gradient(135deg, #ffffff 30%, #a3b3cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.accentLine {
+  width: 60px;
+  height: 4px;
+  background: #3b82f6;
+  margin-bottom: 30px;
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+}
+
+.bioText {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #9ca3af;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/* Premium Callout Box for Contact Info */
+.contactBox {
+  margin-top: 20px;
+  background: rgba(59, 130, 246, 0.04);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.contactBox h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #e5e7eb;
+  margin: 0 0 12px 0;
+}
+
+.emailLink {
+  color: #3b82f6;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.emailLink:hover {
+  color: #60a5fa;
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.4);
+}
+
+/* Seamless Mobile Responsiveness Collapse */
+@media (max-width: 900px) {
+  .container {
     flex-direction: column;
-    margin: 0 auto;
-  }
-
-  .text{
-    color: white;
-    padding: 20px;
     text-align: center;
-    height: 100%;
-  }
-
-  .header{
-    color: white;
-    text-align: center;
-    margin-top: 40px;
-  }
-
-  .containerImage{
-    margin: 0 auto;
+    gap: 40px;
   }
   
-  @media (min-width:768px) {
-    .aboutContent{
-     width: 70%;
-position: relative;
-        justify-content: center;
-        align-items: center;
-        height: calc(100vh - 200px);
-    }
-    .aboutContent::-webkit-scrollbar {
-      display: none;
-    }
-
-    .containerImage{
-        margin-top: 10vh;
-    }
-  
-
-  
-    .wrapper{
-      width: 75%;
-      margin: 0 auto;
-      position: relative;
-    
-    }
-  }
-   */
-
-   .wrapper{
-    display: flex;
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: white;
-    flex-direction: column;
-    margin-top: 6rem;
-   
-}
-
-.profileImage{
+  .imageColumn, .textColumn {
     width: 100%;
-    border-radius: 60px;
-    box-shadow: 6px 6px 6px 6px solid white;
-    
-    padding: 40px;
-}
-
-.header{
-     font-family: 'Bungee Tint';
-  font-optical-sizing: auto;
-  font-size: clamp(3rem, 5vw, 3.5rem);
-
-  font-style: normal;
-  margin-bottom: 4rem;
-}
-
-.aboutContent{
-  padding: 30px;
-}
-
-@media (min-width:768px) {
-
-  .aboutContent{
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
   }
-
-  .text{
-    width: 50%;
-  }
-
-  .profileImage{
-    width: 500px;
-  }
-
-
   
+  .accentLine {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .header {
+    font-size: 2.8rem;
+  }
+  
+  .profileImage {
+    max-width: 280px;
+  }
 }
