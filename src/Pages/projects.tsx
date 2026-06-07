@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../CSS/projects.module.css';
 import 'animate.css';
 
 const Projects = () => {
+  const [loading, setLoading] = useState(true);
+
   const projects = [
     { name: 'After Effects Demo', vimeoId: '1092567274', builtWith: 'Adobe After Effects' },
     { name: 'After Effects Demo', vimeoId: '1100987036', builtWith: 'Adobe After Effects' },
@@ -20,26 +22,43 @@ const Projects = () => {
     { name: 'Final Cut Pro Demo', vimeoId: '1092573026', builtWith: 'Final Cut Pro, Apple Motion' },
   ];
 
+  useEffect(() => {
+    // Gives the iframes 1.5 seconds to claim their layout box dimensions safely
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // 💡 Render the loading state if true
+  if (loading) {
+    return (
+      <div className={styles.loaderWrapper}>
+        <div className={styles.spinner}></div>
+        <p className={styles.loaderText}>Loading Production Showroom...</p>
+      </div>
+    );
+  }
+
+  // Once loading is false, render your flawless grid layout
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
         
-        {/* Header Section */}
         <header className={`${styles.headerSection} animate__animated animate__fadeIn`}>
           <h1 className={styles.title}>My Projects</h1>
           <p className={styles.subtitle}>A showroom of video editing, motion graphics, and post-production work.</p>
           <div className={styles.accentLine}></div>
         </header>
 
-        {/* 3-Column Video Portfolio Grid */}
         <div className={styles.grid}>
           {projects.map((site: any, index: number) => (
             <div 
               key={index} 
               className={`${styles.card} animate__animated animate__fadeInUp`}
-              style={{ animationDelay: `${index * 0.05}s` }} // Staggers the cards popping in
+              style={{ animationDelay: `${index * 0.03}s` }}
             >
-              {/* Responsive Video Aspect-Ratio Container */}
               <div className={styles.videoWrapper}>
                 {site.vimeoId ? (
                   <iframe
@@ -62,7 +81,6 @@ const Projects = () => {
                 )}
               </div>
               
-              {/* Info Frame underneath the video */}
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{site.name}</h3>
                 <div className={styles.tagLine}>
