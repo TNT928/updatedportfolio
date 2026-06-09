@@ -10,10 +10,10 @@ const About = () => {
         <div className={styles.imageColumn}>
           <div className={styles.containerImage}>
             {/* Swapped backslash to forward slash for clean web routing */}
-            <img
-              src="Images/Modified Cartoon.png"
-              alt="Michael VanderLoon Cartoon Avatar"
-              className={`${styles.profileImage} animate__animated animate__zoomIn`}
+             <img
+              src="Images/Me_in_hat.jpg"
+              alt="Michael VanderLoon"
+              className={`${styles.profileImage} animate__animated animate__fadeIn`}
             />
           </div>
         </div>
@@ -42,7 +42,7 @@ const About = () => {
           <div className={styles.contactBox}>
             <h4>
               If you are in need of a skilled and dedicated video editor that
-              loves using his creative energy, feel free to reach out to me at:
+              loves using creative energy, feel free to reach out to me at:
             </h4>
             <a href='mailto:showtimeandjoysticks@gmail.com' className={styles.emailLink}>
               showtimeandjoysticks@gmail.com
