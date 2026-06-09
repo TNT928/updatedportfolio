@@ -16,7 +16,7 @@ const Home = () => {
           <div className={styles.accentLine}></div>
           
           <p className={styles.text}>
-            I’m a creative video editor and motion designer with a passion for storytelling, 
+            I’m a creative video editor, motion designer, photographer and videographer with a passion for storytelling, 
             pacing, and polished visuals. I specialize in editing engaging content for YouTube, 
             social media, branded campaigns, and cinematic pieces using Adobe Premiere Pro, 
             After Effects, Apple Motion, and Final Cut Pro.
