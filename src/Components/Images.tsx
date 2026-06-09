@@ -3,6 +3,9 @@ import styles from "./Images.module.css";
 
 const Images = () => {
   const images = [
+      "/Images/Photography/cadillac1.JPG",
+    "/Images/Photography/cadillac2.JPG",
+    "/Images/Photography/IMG_0851.JPG",
     "/Images/Photography/IMG_0734.JPG",
     "/Images/Photography/IMG_0764.JPG",
     "/Images/Photography/IMG_0818.JPG",
@@ -13,6 +16,7 @@ const Images = () => {
     "/Images/Photography/IMG_0869.JPG",
     "/Images/Photography/IMG_0895.JPG",
     "/Images/Photography/IMG_0900.JPG",
+  
   ];
 
   const [index, setIndex] = useState(0);
