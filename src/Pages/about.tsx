@@ -59,14 +59,14 @@ const About = () => {
           <div className={styles.contactBox}>
             <h4>
               If you are in need of a skilled and dedicated video editor that
-              loves using creative energy, feel free to reach out to me at:
-            </h4>
-            <a
+              loves using creative energy, feel free to reach out to me at: <a
               href="mailto:vanderloonmedia@gmail.com"
               className={styles.emailLink}
             >
               vanderloon@gmail.com
             </a>
+            </h4>
+           
           </div>
         </div>
       </div>
