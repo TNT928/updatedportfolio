@@ -16,7 +16,7 @@ const Header = () => {
       <Navbar expand="lg" className={styles.header} expanded={expanded} fixed="top">
         <Container>
           <Navbar.Brand as={Link} to="/" className={styles.brandLink} onClick={() => setExpanded(false)}>
-           VanderLoon Media
+           <span style={{color:"#D1A551"}} >VanderLoon</span> <span style={{color:"#F2E1C9"}}>Media</span>
           </Navbar.Brand>
           
           {/* Added a custom class to style the mobile hamburger icon line color */}

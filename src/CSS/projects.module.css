@@ -26,6 +26,7 @@
   background: linear-gradient(135deg, #ffffff 30%, #a3b3cc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding-top: 3rem;
 }
 
 .subtitle {
