@@ -6,15 +6,16 @@ const Projects = () => {
   const [loading, setLoading] = useState(true);
 
   const projects = [
-    { name: 'After Effects Demo', vimeoId: '1092567274', builtWith: 'Adobe After Effects' },
+      { name: 'Detective Skit', youtubeId: 'd_lPn4BcXEE', builtWith: 'Final Cut Pro' },
+      { name: 'After Effects Demo', vimeoId: '1092567274', builtWith: 'Adobe After Effects' },
     { name: 'After Effects Demo', vimeoId: '1100987036', builtWith: 'Adobe After Effects' },
     { name: 'Premiere Pro Preset Transitions', vimeoId: '1093280132', builtWith: 'Adobe Premiere Pro' },
-    { name: 'Custom Titles', vimeoId: '1094691042?h=daea667b00', builtWith: 'Adobe Premiere Pro, After Effects' },
+    // { name: 'Custom Titles', vimeoId: '1094691042?h=daea667b00', builtWith: 'Adobe Premiere Pro, After Effects' },
     { name: 'Mobile Demo', vimeoId: '1094691093?h=2d4a960051', builtWith: 'Adobe Premiere Pro, After Effects' },
     { name: 'Tiktok / Youtube Shorts', youtubeId: 'GmiugZnjrTk', builtWith: 'After Effects' },
     { name: 'Tiktok / Youtube Shorts', youtubeId: '2C_jN_Dvbvo', builtWith: 'Adobe Premiere Pro, After Effects' },
     { name: 'Tiktok / Youtube Shorts', youtubeId: 'duptNx1UyRU', builtWith: 'Adobe Premiere Pro, After Effects' },
-    { name: 'Detective Skit', youtubeId: 'd_lPn4BcXEE', builtWith: 'Final Cut Pro' },
+  
     { name: 'Wolf Lake Park Photography', youtubeId: 'jPz4JbUM-UE', builtWith: 'Final Cut Pro' },
     { name: 'Tiktok / Youtube Shorts', youtubeId: 'NjIQsBgfi2Q', builtWith: 'After Effects' },
     { name: 'After Effects advertisement', vimeoId: '1095566897?h=9325ca1985', builtWith: 'Adobe Premiere Pro, After Effects' },

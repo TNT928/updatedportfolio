@@ -12,10 +12,11 @@
 .brandLink {
   color: #ffffff !important;
   font-weight: 800;
-  font-size: 1.35rem;
+  font-size: 30px !important;
   letter-spacing: -0.5px;
   text-decoration: none;
   transition: color 0.2s ease;
+   font-family: 'Ephesis', cursive;
 }
 
 .brandLink:hover {
