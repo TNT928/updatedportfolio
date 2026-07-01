@@ -48,7 +48,7 @@ const Projects = () => {
       <div className={styles.container}>
         
         <header className={`${styles.headerSection} animate__animated animate__fadeIn`}>
-          <h1 className={styles.title}>My Projects</h1>
+          <h1 className={styles.title}>Projects</h1>
           <p className={styles.subtitle}>A showroom of video editing, motion graphics, and post-production work.</p>
           <div className={styles.accentLine}></div>
         </header>

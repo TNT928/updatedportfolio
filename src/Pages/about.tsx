@@ -63,7 +63,7 @@ const About = () => {
               href="mailto:vanderloonmedia@gmail.com"
               className={styles.emailLink}
             >
-              vanderloon@gmail.com
+              vanderloonmedia@gmail.com
             </a>
             </h4>
            

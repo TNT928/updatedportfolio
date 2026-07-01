@@ -37,6 +37,10 @@ const Header = () => {
                 Projects
               </Nav.Link>
               
+              <Nav.Link as={Link} to="/photography" className={styles.navLink} onClick={() => setExpanded(false)}>
+               Photography
+              </Nav.Link>
+              
               <Nav.Link as={Link} to="/about" className={styles.navLink} onClick={() => setExpanded(false)}>
                 About
               </Nav.Link>
