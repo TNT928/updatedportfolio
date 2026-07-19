@@ -23,52 +23,63 @@ const Projects = () => {
   //   { name: 'Final Cut Pro Demo', vimeoId: '1092573026', builtWith: 'Final Cut Pro, Apple Motion' },
   // ];
 
-  const bunny = "https://vanderloonmedia.b-cdn.net/";
+  // const bunny = "https://vanderloonmedia.b-cdn.net/";
+
+const bunny = "https://vanderloonmedia.b-cdn.net/";
 
 const projects = [
   {
     name: "Real Estate Demo",
     file: "Real%20Estate%20Demo.mp4",
-    builtWith: "Final Cut Pro"
+    poster: "Thumbnails/real-estate-demo.png",
+        builtWith: "Final Cut Pro, Apple Motion"
   },
   {
     name: "Cadillac Broll",
     file: "Cadillac%20Broll.mp4",
-    builtWith: "Final Cut Pro"
+    poster: "Thumbnails/cadillac-broll.png",
+        builtWith: "Final Cut Pro, Apple Motion"
   },
   {
     name: "Cadillac Vertical",
     file: "Cadillac%20Vertical.mp4",
+    poster: "Thumbnails/cadillac-demo-mobile.png",
     builtWith: "Final Cut Pro, Apple Motion"
   },
   {
     name: "Wolf Lake Park Mobile",
     file: "Wolf%20Lake%20Park%20Mobile.mp4",
+    poster: "Thumbnails/wolf-lake-park.png",
     builtWith: "Final Cut Pro, Apple Motion"
   },
   {
     name: "Birthday Video",
     file: "Silas%20Birthday.mp4",
+    poster: "Thumbnails/birthday-demo.png",
     builtWith: "Final Cut Pro, Apple Motion"
   },
   {
     name: "Morikami Japanese Garden",
     file: "Morikami%20Japanese%20Garden.mp4",
+    poster: "Thumbnails/morikami-garden.png",
     builtWith: "Adobe Premiere Pro, After Effects"
   },
   {
-    name: "Mobile Landscape Demo ",
+    name: "Mobile Landscape Demo",
     file: "Mobile%20Demo.mp4",
+    poster: "Thumbnails/mobile-landscape.png",
     builtWith: "Adobe Premiere Pro, After Effects"
   },
   {
     name: "Custom Title Demo",
     file: "Custom%20Title%20Demo.mp4",
-  builtWith: "Final Cut Pro, Apple Motion"
+    poster: "Thumbnails/custom-title.png",
+    builtWith: "Final Cut Pro, Apple Motion"
   },
   {
     name: "After Effects Demo",
     file: "After%20Effects%20Demo%20.mp4",
+    poster: "Thumbnails/after-effects-demo.png",
     builtWith: "Adobe Premiere Pro, After Effects"
   },
 ];
@@ -116,6 +127,7 @@ const projects = [
     controls
     preload="metadata"
     playsInline
+    poster={`${bunny}${site.poster}`}
   >
     <source
       src={`${bunny}${site.file}`}
