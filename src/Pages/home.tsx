@@ -7,17 +7,22 @@ const Home = () => {
     <div className={styles.wrapper}>
 
       {/* VIDEO HERO */}
-      <div className={styles.videoHero}>
-        <iframe
-  className={styles.videoPlayer}
-  src="https://www.youtube.com/embed/Z6k8_UN6er0?autoplay=1&mute=1"
-  title="Demo Reel"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowFullScreen
-/><div className={styles.videoHero}>
-  
+  <div className={styles.videoHero}>
+  <video
+    className={styles.videoPlayer}
+    autoPlay
+    muted
+    loop
+    playsInline
+    controls={true}
+  >
+    <source
+      src="https://vanderloonmedia.b-cdn.net/Cadillac%20Broll.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
 </div>
-      </div>
 
       {/* TEXT SECTION ONLY */}
       <div className={styles.bodyWrapper}>

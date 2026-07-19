@@ -5,23 +5,73 @@ import 'animate.css';
 const Projects = () => {
   const [loading, setLoading] = useState(true);
 
-  const projects = [
-      { name: 'Detective Skit', youtubeId: 'd_lPn4BcXEE', builtWith: 'Final Cut Pro' },
-      { name: 'After Effects Demo', vimeoId: '1092567274', builtWith: 'Adobe After Effects' },
-    { name: 'After Effects Demo', vimeoId: '1100987036', builtWith: 'Adobe After Effects' },
-    { name: 'Premiere Pro Preset Transitions', vimeoId: '1093280132', builtWith: 'Adobe Premiere Pro' },
-    // { name: 'Custom Titles', vimeoId: '1094691042?h=daea667b00', builtWith: 'Adobe Premiere Pro, After Effects' },
-    { name: 'Mobile Demo', vimeoId: '1094691093?h=2d4a960051', builtWith: 'Adobe Premiere Pro, After Effects' },
-    { name: 'Tiktok / Youtube Shorts', youtubeId: 'GmiugZnjrTk', builtWith: 'After Effects' },
-    { name: 'Tiktok / Youtube Shorts', youtubeId: '2C_jN_Dvbvo', builtWith: 'Adobe Premiere Pro, After Effects' },
-    { name: 'Tiktok / Youtube Shorts', youtubeId: 'duptNx1UyRU', builtWith: 'Adobe Premiere Pro, After Effects' },
+  // const projects = [
+  //     { name: 'Detective Skit', youtubeId: 'd_lPn4BcXEE', builtWith: 'Final Cut Pro' },
+  //     { name: 'After Effects Demo', vimeoId: '1092567274', builtWith: 'Adobe After Effects' },
+  //   { name: 'After Effects Demo', vimeoId: '1100987036', builtWith: 'Adobe After Effects' },
+  //   { name: 'Premiere Pro Preset Transitions', vimeoId: '1093280132', builtWith: 'Adobe Premiere Pro' },
+  //   // { name: 'Custom Titles', vimeoId: '1094691042?h=daea667b00', builtWith: 'Adobe Premiere Pro, After Effects' },
+  //   { name: 'Mobile Demo', vimeoId: '1094691093?h=2d4a960051', builtWith: 'Adobe Premiere Pro, After Effects' },
+  //   { name: 'Tiktok / Youtube Shorts', youtubeId: 'GmiugZnjrTk', builtWith: 'After Effects' },
+  //   { name: 'Tiktok / Youtube Shorts', youtubeId: '2C_jN_Dvbvo', builtWith: 'Adobe Premiere Pro, After Effects' },
+  //   { name: 'Tiktok / Youtube Shorts', youtubeId: 'duptNx1UyRU', builtWith: 'Adobe Premiere Pro, After Effects' },
   
-    { name: 'Wolf Lake Park Photography', youtubeId: 'jPz4JbUM-UE', builtWith: 'Final Cut Pro' },
-    { name: 'Tiktok / Youtube Shorts', youtubeId: 'NjIQsBgfi2Q', builtWith: 'After Effects' },
-    { name: 'After Effects advertisement', vimeoId: '1095566897?h=9325ca1985', builtWith: 'Adobe Premiere Pro, After Effects' },
-    { name: 'Final Cut Pro Demo W Voice Over', vimeoId: '1092570276', builtWith: 'Final Cut Pro, Apple Motion' },
-    { name: 'Final Cut Pro Demo', vimeoId: '1092573026', builtWith: 'Final Cut Pro, Apple Motion' },
-  ];
+  //   { name: 'Wolf Lake Park Photography', youtubeId: 'jPz4JbUM-UE', builtWith: 'Final Cut Pro' },
+  //   { name: 'Tiktok / Youtube Shorts', youtubeId: 'NjIQsBgfi2Q', builtWith: 'After Effects' },
+  //   { name: 'After Effects advertisement', vimeoId: '1095566897?h=9325ca1985', builtWith: 'Adobe Premiere Pro, After Effects' },
+  //   { name: 'Final Cut Pro Demo W Voice Over', vimeoId: '1092570276', builtWith: 'Final Cut Pro, Apple Motion' },
+  //   { name: 'Final Cut Pro Demo', vimeoId: '1092573026', builtWith: 'Final Cut Pro, Apple Motion' },
+  // ];
+
+  const bunny = "https://vanderloonmedia.b-cdn.net/";
+
+const projects = [
+  {
+    name: "Real Estate Demo",
+    file: "Real%20Estate%20Demo.mp4",
+    builtWith: "Final Cut Pro"
+  },
+  {
+    name: "Cadillac Broll",
+    file: "Cadillac%20Broll.mp4",
+    builtWith: "Final Cut Pro"
+  },
+  {
+    name: "Cadillac Vertical",
+    file: "Cadillac%20Vertical.mp4",
+    builtWith: "Final Cut Pro, Apple Motion"
+  },
+  {
+    name: "Wolf Lake Park Mobile",
+    file: "Wolf%20Lake%20Park%20Mobile.mp4",
+    builtWith: "Final Cut Pro, Apple Motion"
+  },
+  {
+    name: "Birthday Video",
+    file: "Silas%20Birthday.mp4",
+    builtWith: "Final Cut Pro, Apple Motion"
+  },
+  {
+    name: "Morikami Japanese Garden",
+    file: "Morikami%20Japanese%20Garden.mp4",
+    builtWith: "Adobe Premiere Pro, After Effects"
+  },
+  {
+    name: "Mobile Landscape Demo ",
+    file: "Mobile%20Demo.mp4",
+    builtWith: "Adobe Premiere Pro, After Effects"
+  },
+  {
+    name: "Custom Title Demo",
+    file: "Custom%20Title%20Demo.mp4",
+  builtWith: "Final Cut Pro, Apple Motion"
+  },
+  {
+    name: "After Effects Demo",
+    file: "After%20Effects%20Demo%20.mp4",
+    builtWith: "Adobe Premiere Pro, After Effects"
+  },
+];
 
   useEffect(() => {
     // Gives the iframes 1.5 seconds to claim their layout box dimensions safely
@@ -60,27 +110,20 @@ const Projects = () => {
               className={`${styles.card} animate__animated animate__fadeInUp`}
               style={{ animationDelay: `${index * 0.03}s` }}
             >
-              <div className={styles.videoWrapper}>
-                {site.vimeoId ? (
-                  <iframe
-                    className={styles.video}
-                    src={`https://player.vimeo.com/video/${site.vimeoId}`}
-                    frameBorder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowFullScreen
-                    title={site.name}
-                  />
-                ) : (
-                  <iframe
-                    className={styles.video}
-                    src={`https://www.youtube.com/embed/${site.youtubeId}`}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    title={site.name}
-                  />
-                )}
-              </div>
+             <div className={styles.videoWrapper}>
+  <video
+    className={styles.video}
+    controls
+    preload="metadata"
+    playsInline
+  >
+    <source
+      src={`${bunny}${site.file}`}
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+</div>
               
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{site.name}</h3>
