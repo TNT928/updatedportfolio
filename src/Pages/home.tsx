@@ -42,7 +42,7 @@ const Home = () => {
 From YouTube content and social media videos to promotional and cinematic-style projects, the goal is to combine strong storytelling with technical precision. We work with industry-standard tools like Adobe Premiere Pro, After Effects, Apple Motion, and Final Cut Pro to bring ideas to life with a clean, professional finish.
           </p>
 
-          <div className={styles.linkContainer}>
+          {/* <div className={styles.linkContainer}>
             <p className={styles.linkLabel}>Check out my Youtube Channel:</p>
             <a
               href="https://www.youtube.com/@ShowtimeandJoysticks"
@@ -52,7 +52,7 @@ From YouTube content and social media videos to promotional and cinematic-style 
             >
               🎥 Showtime and Joysticks
             </a>
-          </div>
+          </div> */}
         </div>
 
       </div>
