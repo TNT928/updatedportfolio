@@ -46,7 +46,15 @@ const Photography = () => {
   '/Images/Photography/IMG_0865.JPG',
   '/Images/Photography/IMG_0869.JPG',
   '/Images/Photography/IMG_0895.JPG',
-  '/Images/Photography/IMG_0900.JPG'
+  '/Images/Photography/IMG_0900.JPG',
+  'Images/Photography/IMG_0991.JPG',
+  'Images/Photography/IMG_1021.JPG',
+  'Images/Photography/IMG_1346.JPG',
+  'Images/Photography/IMG_1349.JPG',
+  'Images/Photography/IMG_1374.JPG',
+  'Images/Photography/IMG_1745.JPG',
+  'Images/Photography/IMG_1750.JPG'
+
 ];
 
   useEffect(() => {
