@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../CSS/about.module.css';
 
 const About = () => {
@@ -21,52 +22,38 @@ const About = () => {
         <div
           className={`${styles.textColumn} animate__animated animate__slideInDown`}
         >
-          <h1 className={styles.header}>About Me</h1>
+          <h1 className={styles.header}>About VanderLoon Media</h1>
           <div className={styles.accentLine} />
 
-          <h3 className={styles.bioText}>
-            My name is Michael VanderLoon, and for the past three years I’ve
-            been running a YouTube channel focused on movie, TV, and video game
-            reviews. That experience is where I developed my foundation in
-            storytelling, pacing, and audience engagement through video.
-          </h3>
+          <p className={styles.bioText}>
+            VanderLoon Media is a South Florida creative production studio focused on professional video production,
+            photography, editing, and motion graphics. I help businesses, brands, and creators turn ideas into
+            polished visual content that captures attention and tells a clear story.
+          </p>
 
-          <h3 className={styles.bioText}>
-            I originally started editing in iMovie before moving into Final Cut
-            Pro, where I really began to refine my craft and discover my passion
-            for using media to tell stories that connect with people. Over time,
-            I expanded into Apple Motion to create custom transitions, motion
-            graphics, and text animations that elevated my work beyond basic
-            editing.
-          </h3>
-          <h3 className={styles.bioText}>
-            Alongside Final Cut Pro and Apple Motion, I’ve built strong
-            experience using Adobe Premiere Pro, After Effects, Adobe Audition,
-            and Photoshop, allowing me to work across the full post-production
-            workflow.
-          </h3>
+          <p className={styles.bioText}>
+            My name is Michael VanderLoon. For the past several years, I have created and produced video content for
+            my own entertainment channel, building a strong foundation in storytelling, pacing, audience engagement,
+            and on-camera communication. That hands-on experience taught me how to shape a strong idea into content
+            people want to watch.
+          </p>
 
-          <h3 className={styles.bioText}>
-            Today, I’m focused on applying these skills in a more professional
-            capacity through VanderLoon Media, helping businesses, brands, and
-            creators bring their ideas to life through high-quality video
-            content. My goal is to combine creative storytelling with technical
-            execution to produce content that not only looks polished, but also
-            helps businesses communicate more clearly and connect more
-            effectively with their audience.
-          </h3>
+          <p className={styles.bioText}>
+            Today, I bring that same creative focus to client projects—whether that means showcasing a restaurant,
+            filming an event, highlighting a property, capturing an automotive feature, or creating social media
+            content for a growing business. Every project is approached with care, from planning and filming through
+            editing, color, sound, and final delivery.
+          </p>
+
+          <p className={styles.bioText}>
+            VanderLoon Media combines creative storytelling with reliable technical execution to create visuals that
+            feel professional, purposeful, and true to your brand.
+          </p>
 
           <div className={styles.contactBox}>
-            <h4>
-              If you are in need of a skilled and dedicated video editor that
-              loves using creative energy, feel free to reach out to me at: <a
-              href="mailto:vanderloonmedia@gmail.com"
-              className={styles.emailLink}
-            >
-              vanderloonmedia@gmail.com
-            </a>
-            </h4>
-           
+            <h2>Have a project in mind?</h2>
+            <p>Let&apos;s talk about how we can bring it to life.</p>
+            <Link to="/contact" className={styles.contactButton}>Start Your Project</Link>
           </div>
         </div>
       </div>

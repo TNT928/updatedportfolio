@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import "./App.css";
 import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   BrowserRouter,
@@ -59,11 +60,30 @@ const RouteMetadata = () => {
   return null;
 };
 
+const ScrollToTop = () => {
+  const location = useLocation();
+
+  useLayoutEffect(() => {
+    const scrollToTop = () => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+
+    scrollToTop();
+    const frame = window.requestAnimationFrame(scrollToTop);
+    return () => window.cancelAnimationFrame(frame);
+  }, [location.pathname, location.search]);
+
+  return null;
+};
+
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <RouteMetadata />
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path='/' element={<Home/>}/>
@@ -73,6 +93,7 @@ function App() {
           <Route path='contact' element={<Contact/>}/>
           <Route path='services' element={<Services/>}/>
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );

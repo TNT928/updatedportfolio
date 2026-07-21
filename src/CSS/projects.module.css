@@ -84,6 +84,10 @@
   border: 0;
 }
 
+.portraitCard .video {
+  object-fit: contain;
+}
+
 .cardContent {
   padding: 24px 20px;
 }
@@ -96,6 +100,22 @@
   letter-spacing: -0.2px;
 }
 
+.category {
+  margin: 0 0 9px;
+  color: #78aefc;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.description {
+  margin: 0;
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .tagLine {
   font-size: 0.9rem;
   color: #9ca3af;
@@ -105,6 +125,46 @@
 .tagLabel {
   color: #3b82f6;
   font-weight: 600;
+}
+
+.ctaSection {
+  margin: 72px auto 0;
+  max-width: 760px;
+  padding: 42px 28px;
+  text-align: center;
+  background: rgba(59, 130, 246, 0.07);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 20px;
+}
+
+.ctaSection h2 {
+  margin: 0;
+  color: #f3f4f6;
+  font-size: 1.7rem;
+}
+
+.ctaSection p {
+  margin: 13px 0 23px;
+  color: #aeb8c7;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 13px 20px;
+  color: #07101e;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none;
+  background: #78aefc;
+  border-radius: 9px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.ctaButton:hover {
+  color: #07101e;
+  background: #a7c9ff;
+  transform: translateY(-2px);
 }
 
 /* Full Screen Loader Wrapper */
@@ -163,5 +223,10 @@
   }
   .wrapper {
     padding: 60px 16px;
+  }
+
+  .ctaSection {
+    margin-top: 48px;
+    padding: 34px 20px;
   }
 }

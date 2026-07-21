@@ -1,154 +1,126 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../CSS/projects.module.css';
 import 'animate.css';
 
-const Projects = () => {
-  const [loading, setLoading] = useState(true);
-
-  // const projects = [
-  //     { name: 'Detective Skit', youtubeId: 'd_lPn4BcXEE', builtWith: 'Final Cut Pro' },
-  //     { name: 'After Effects Demo', vimeoId: '1092567274', builtWith: 'Adobe After Effects' },
-  //   { name: 'After Effects Demo', vimeoId: '1100987036', builtWith: 'Adobe After Effects' },
-  //   { name: 'Premiere Pro Preset Transitions', vimeoId: '1093280132', builtWith: 'Adobe Premiere Pro' },
-  //   // { name: 'Custom Titles', vimeoId: '1094691042?h=daea667b00', builtWith: 'Adobe Premiere Pro, After Effects' },
-  //   { name: 'Mobile Demo', vimeoId: '1094691093?h=2d4a960051', builtWith: 'Adobe Premiere Pro, After Effects' },
-  //   { name: 'Tiktok / Youtube Shorts', youtubeId: 'GmiugZnjrTk', builtWith: 'After Effects' },
-  //   { name: 'Tiktok / Youtube Shorts', youtubeId: '2C_jN_Dvbvo', builtWith: 'Adobe Premiere Pro, After Effects' },
-  //   { name: 'Tiktok / Youtube Shorts', youtubeId: 'duptNx1UyRU', builtWith: 'Adobe Premiere Pro, After Effects' },
-  
-  //   { name: 'Wolf Lake Park Photography', youtubeId: 'jPz4JbUM-UE', builtWith: 'Final Cut Pro' },
-  //   { name: 'Tiktok / Youtube Shorts', youtubeId: 'NjIQsBgfi2Q', builtWith: 'After Effects' },
-  //   { name: 'After Effects advertisement', vimeoId: '1095566897?h=9325ca1985', builtWith: 'Adobe Premiere Pro, After Effects' },
-  //   { name: 'Final Cut Pro Demo W Voice Over', vimeoId: '1092570276', builtWith: 'Final Cut Pro, Apple Motion' },
-  //   { name: 'Final Cut Pro Demo', vimeoId: '1092573026', builtWith: 'Final Cut Pro, Apple Motion' },
-  // ];
-
-  // const bunny = "https://vanderloonmedia.b-cdn.net/";
-
-const bunny = "https://vanderloonmedia.b-cdn.net/";
+const bunny = 'https://vanderloonmedia.b-cdn.net/';
 
 const projects = [
   {
-    name: "Real Estate Demo",
-    file: "Real%20Estate%20Demo.mp4",
-    poster: "Thumbnails/real-estate-demo.png",
-        builtWith: "Final Cut Pro, Apple Motion"
+    name: 'Cadillac LYRIQ Showcase',
+    category: 'Automotive',
+    description: 'I put this together to show off the LYRIQ’s sleek details, lighting, and movement in a cinematic way.',
+    file: 'Cadillac%20Broll.mp4',
+    poster: 'Thumbnails/cadillac-broll.png',
   },
   {
-    name: "Cadillac Broll",
-    file: "Cadillac%20Broll.mp4",
-    poster: "Thumbnails/cadillac-broll.png",
-        builtWith: "Final Cut Pro, Apple Motion"
+    name: 'Real Estate Demo',
+    category: 'Real Estate',
+    description: 'A real estate demo showing how I would highlight a home’s space, light, and best features on video.',
+    file: 'Real%20Estate%20Demo.mp4',
+    poster: 'Thumbnails/real-estate-demo.png',
   },
   {
-    name: "Cadillac Vertical",
-    file: "Cadillac%20Vertical.mp4",
-    poster: "Thumbnails/cadillac-demo-mobile.png",
-    builtWith: "Final Cut Pro, Apple Motion"
+    name: 'Cadillac Social Reel',
+    category: 'Automotive · Social Media',
+    description: 'A vertical version of the Cadillac video made to feel right at home on Instagram, Facebook, or TikTok.',
+    file: 'Cadillac%20Vertical.mp4',
+    poster: 'Thumbnails/cadillac-demo-mobile.png',
+    orientation: 'portrait',
   },
   {
-    name: "Wolf Lake Park Mobile",
-    file: "Wolf%20Lake%20Park%20Mobile.mp4",
-    poster: "Thumbnails/wolf-lake-park.png",
-    builtWith: "Final Cut Pro, Apple Motion"
+    name: 'Birthday Event Highlight',
+    category: 'Events',
+    description: 'A birthday highlight focused on the fun moments, the people, and the energy of the day.',
+    file: 'Silas%20Birthday.mp4',
+    poster: 'Thumbnails/birthday-demo.png',
   },
   {
-    name: "Birthday Video",
-    file: "Silas%20Birthday.mp4",
-    poster: "Thumbnails/birthday-demo.png",
-    builtWith: "Final Cut Pro, Apple Motion"
+    name: 'Morikami Japanese Garden',
+    category: 'Lifestyle · Travel',
+    description: 'A cinematic look at Morikami Japanese Garden, built around the atmosphere, scenery, and small details.',
+    file: 'Morikami%20Japanese%20Garden.mp4',
+    poster: 'Thumbnails/morikami-garden.png',
   },
   {
-    name: "Morikami Japanese Garden",
-    file: "Morikami%20Japanese%20Garden.mp4",
-    poster: "Thumbnails/morikami-garden.png",
-    builtWith: "Adobe Premiere Pro, After Effects"
+    name: 'Wolf Lake Park Social Reel',
+    category: 'Social Media',
+    description: 'A quick vertical outdoor reel showing how a simple location can feel more cinematic in a short social video.',
+    file: 'Wolf%20Lake%20Park%20Mobile.mp4',
+    poster: 'Thumbnails/wolf-lake-park.png',
+    orientation: 'portrait',
   },
   {
-    name: "Mobile Landscape Demo",
-    file: "Mobile%20Demo.mp4",
-    poster: "Thumbnails/mobile-landscape.png",
-    builtWith: "Adobe Premiere Pro, After Effects"
+    name: 'Mobile Social Media Demo',
+    category: 'Social Media · Motion Graphics',
+    description: 'A short-form video demo showing my editing style, pacing, and use of visual effects for social content.',
+    file: 'Mobile%20Demo.mp4',
+    poster: 'Thumbnails/mobile-landscape.png',
   },
   {
-    name: "Custom Title Demo",
-    file: "Custom%20Title%20Demo.mp4",
-    poster: "Thumbnails/custom-title.png",
-    builtWith: "Final Cut Pro, Apple Motion"
+    name: 'Custom Title Demo',
+    category: 'Motion Graphics',
+    description: 'A quick example of the custom titles, animated text, and transitions I can add to make a video feel more polished.',
+    file: 'Custom%20Title%20Demo.mp4',
+    poster: 'Thumbnails/custom-title.png',
   },
   {
-    name: "After Effects Demo",
-    file: "After%20Effects%20Demo%20.mp4",
-    poster: "Thumbnails/after-effects-demo.png",
-    builtWith: "Adobe Premiere Pro, After Effects"
+    name: 'After Effects Demo',
+    category: 'Motion Graphics',
+    description: 'A motion graphics demo showing some of the animation, compositing, and visual effects work I enjoy creating.',
+    file: 'After%20Effects%20Demo%20.mp4',
+    poster: 'Thumbnails/after-effects-demo.png',
   },
 ];
 
-  useEffect(() => {
-    // Gives the iframes 1.5 seconds to claim their layout box dimensions safely
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  // 💡 Render the loading state if true
-  if (loading) {
-    return (
-      <div className={styles.loaderWrapper}>
-        <div className={styles.spinner}></div>
-        <p className={styles.loaderText}>Loading Production Showroom...</p>
-      </div>
-    );
-  }
-
-  // Once loading is false, render your flawless grid layout
+const Projects = () => {
   return (
-    <div className={styles.wrapper}>
+    <main className={styles.wrapper}>
       <div className={styles.container}>
-        
         <header className={`${styles.headerSection} animate__animated animate__fadeIn`}>
-          <h1 className={styles.title}>Projects</h1>
-          <p className={styles.subtitle}>A showroom of video editing, motion graphics, and post-production work.</p>
+          <h1 className={styles.title}>Video Production Portfolio</h1>
+          <p className={styles.subtitle}>
+            A selection of automotive, real estate, event, social media, and motion graphics work.
+          </p>
           <div className={styles.accentLine}></div>
         </header>
 
         <div className={styles.grid}>
-          {projects.map((site: any, index: number) => (
-            <div 
-              key={index} 
-              className={`${styles.card} animate__animated animate__fadeInUp`}
+          {projects.map((project, index) => (
+            <article
+              key={project.name}
+              className={`${styles.card} ${project.orientation === 'portrait' ? styles.portraitCard : ''} animate__animated animate__fadeInUp`}
               style={{ animationDelay: `${index * 0.03}s` }}
             >
-             <div className={styles.videoWrapper}>
-  <video
-    className={styles.video}
-    controls
-    preload="metadata"
-    playsInline
-    poster={`${bunny}${site.poster}`}
-  >
-    <source
-      src={`${bunny}${site.file}`}
-      type="video/mp4"
-    />
-    Your browser does not support the video tag.
-  </video>
-</div>
-              
-              <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>{site.name}</h3>
-                <div className={styles.tagLine}>
-                  <span className={styles.tagLabel}>Built Using:</span> {site.builtWith}
-                </div>
+              <div className={styles.videoWrapper}>
+                <video
+                  className={styles.video}
+                  controls
+                  preload="metadata"
+                  playsInline
+                  poster={`${bunny}${project.poster}`}
+                >
+                  <source src={`${bunny}${project.file}`} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
-            </div>
+
+              <div className={styles.cardContent}>
+                <p className={styles.category}>{project.category}</p>
+                <h2 className={styles.cardTitle}>{project.name}</h2>
+                <p className={styles.description}>{project.description}</p>
+              </div>
+            </article>
           ))}
         </div>
 
+        <section className={styles.ctaSection}>
+          <h2>Have a project in mind?</h2>
+          <p>Let&apos;s create visuals that help your business, brand, or event stand out.</p>
+          <Link to="/contact" className={styles.ctaButton}>Start Your Project</Link>
+        </section>
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../CSS/services.module.css';
 
 const Services = () => {
@@ -79,6 +80,12 @@ const Services = () => {
             <span>Small Businesses &amp; Brands</span>
             <span>Creators &amp; Personal Brands</span>
           </div>
+        </section>
+
+        <section className={styles.ctaSection}>
+          <h2>Have a project in mind?</h2>
+          <p>Let&apos;s talk about the visuals your business, brand, or event needs.</p>
+          <Link to="/contact" className={styles.ctaButton}>Start Your Project</Link>
         </section>
 
       </div>
