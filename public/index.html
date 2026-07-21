@@ -3,16 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <script>
-      // Restore a clean URL sent here by the GitHub Pages 404 fallback.
-      // This is unnecessary on hosts with SPA rewrites, such as Netlify.
+      // Restore clean URLs from the GitHub Pages 404 fallback and redirect
+      // visitors using the site's former hash URLs to their clean equivalents.
       (function (location) {
+        var basePath = location.pathname.replace(/\/$/, '');
         if (location.search[1] === '/') {
           var route = location.search
             .slice(1)
             .split('&')
             .map(function (part) { return part.replace(/~and~/g, '&'); })
             .join('?');
-          window.history.replaceState(null, '', location.pathname.slice(0, -1) + route + location.hash);
+          window.history.replaceState(null, '', basePath + route + location.hash);
+        } else if (location.hash.indexOf('#/') === 0) {
+          window.history.replaceState(null, '', basePath + location.hash.slice(1));
         }
       }(window.location));
     </script>
