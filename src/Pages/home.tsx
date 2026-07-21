@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "../CSS/home.module.css";
 import "animate.css";
 
@@ -41,6 +42,11 @@ const Home = () => {
 
 From YouTube content and social media videos to promotional and cinematic-style projects, the goal is to combine strong storytelling with technical precision. We work with industry-standard tools like Adobe Premiere Pro, After Effects, Apple Motion, and Final Cut Pro to bring ideas to life with a clean, professional finish.
           </p>
+
+          <div className={styles.ctaGroup}>
+            <Link to="/services" className={styles.primaryCta}>View Services</Link>
+            <Link to="/contact" className={styles.secondaryCta}>Start Your Project</Link>
+          </div>
 
           {/* <div className={styles.linkContainer}>
             <p className={styles.linkLabel}>Check out my Youtube Channel:</p>

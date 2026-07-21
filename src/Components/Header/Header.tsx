@@ -48,6 +48,10 @@ const Header = () => {
               <Nav.Link as={Link} to="/services" className={styles.navLink} onClick={() => setExpanded(false)}>
                 Services
               </Nav.Link>
+
+              <Nav.Link as={Link} to="/contact" className={styles.navLink} onClick={() => setExpanded(false)}>
+                Contact
+              </Nav.Link>
          
             </Nav>
           </Navbar.Collapse>

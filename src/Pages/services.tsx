@@ -41,8 +41,8 @@ const Services = () => {
         
         {/* Header Section */}
         <header className={`${styles.headerSection} animate__animated animate__slideInDown`}>
-          <h1 className={styles.title}>Services Offered</h1>
-          <p className={styles.subtitle}>From pre-production to the final cut—bringing visual stories to life.</p>
+          <h1 className={styles.title}>Video Production &amp; Photography Services</h1>
+          <p className={styles.subtitle}>From pre-production to the final cut—bringing visual stories to life across South Florida.</p>
           <div className={styles.accentLine}></div>
         </header>
 
@@ -56,6 +56,30 @@ const Services = () => {
             </div>
           ))}
         </div>
+
+        <section className={styles.industriesSection}>
+          <div className={styles.industriesContent}>
+            <p className={styles.eyebrow}>Industries We Serve</p>
+            <h2 className={styles.industriesTitle}>Visual content built around your business.</h2>
+            <p className={styles.industriesDescription}>
+              VanderLoon Media creates polished video and photography for businesses,
+              brands, and occasions that deserve to stand out. Whether you are promoting
+              a space, an experience, a product, or a milestone, we tailor the production
+              to your goals and the audience you want to reach.
+            </p>
+            <p className={styles.locationCopy}>
+              Serving Fort Lauderdale, Miami, Boca Raton, and businesses throughout South Florida.
+            </p>
+          </div>
+          <div className={styles.industryList}>
+            <span>Weddings &amp; Events</span>
+            <span>Restaurants &amp; Hospitality</span>
+            <span>Real Estate</span>
+            <span>Automotive</span>
+            <span>Small Businesses &amp; Brands</span>
+            <span>Creators &amp; Personal Brands</span>
+          </div>
+        </section>
 
       </div>
     </div>
