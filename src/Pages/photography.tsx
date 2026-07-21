@@ -97,7 +97,7 @@ const Photography = () => {
       <div className={styles.imageWrapper}>
         <img
           src={photo}
-          alt={`Gallery image ${index + 1}`}
+          alt={`VanderLoon Media photography portfolio item ${index + 1}`}
           className={styles.galleryImage}
           loading="lazy"
         />
