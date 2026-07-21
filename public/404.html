@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting…</title>
+    <script>
+      // GitHub Pages cannot rewrite SPA routes on the server. Send the requested
+      // path to index.html, where it is restored before React starts.
+      (function (location) {
+        var baseSegments = 0;
+        var path = location.pathname
+          .split('/')
+          .slice(1 + baseSegments)
+          .join('/')
+          .replace(/&/g, '~and~');
+        var query = location.search
+          ? '&' + location.search.slice(1).replace(/&/g, '~and~')
+          : '';
+        location.replace(
+          location.protocol + '//' + location.hostname +
+          (location.port ? ':' + location.port : '') +
+          location.pathname.split('/').slice(0, 1 + baseSegments).join('/') +
+          '/?/' + path + query + location.hash
+        );
+      }(window.location));
+    </script>
+  </head>
+  <body></body>
+</html>

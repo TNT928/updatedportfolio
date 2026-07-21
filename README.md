@@ -1,3 +1,26 @@
+# VanderLoon Media website
+
+## Routing and deployment
+
+The site uses `BrowserRouter`, so its public pages use clean URLs such as
+`/services` and `/photography` rather than hash URLs.
+
+### GitHub Pages (current host)
+
+`public/404.html` sends direct visits and refreshes for client-side routes back
+to the app. Keep this file when deploying with `npm run deploy`.
+
+GitHub Pages serves an unknown path as a 404 before this browser redirect runs.
+That makes it functional, but not ideal for SEO.
+
+### Recommended: Netlify
+
+`netlify.toml` provides a server-side SPA rewrite, so direct requests to routes
+such as `/services` return HTTP 200. Import this GitHub repository into Netlify,
+then set the custom domain `www.vanderloonmedia.com` in Netlify and update its
+DNS records as directed. The build command is `npm run build` and the publish
+directory is `build`.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

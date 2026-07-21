@@ -1,15 +1,11 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   Route,
-  BrowserRouter,
-  useLocation,
-  HashRouter,
 } from "react-router-dom";
 import About from "./Pages/about";
 import Projects from "./Pages/projects";
@@ -21,8 +17,7 @@ import Photography from "./Pages/photography";
 
 function App() {
   return (
-    <HashRouter>
-      {" "}
+    <BrowserRouter>
       <div className="App">
         <Header />
         <Routes>
@@ -34,7 +29,7 @@ function App() {
           <Route path='services' element={<Services/>}/>
         </Routes>
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
