@@ -7,6 +7,14 @@ const bunny = 'https://vanderloonmedia.b-cdn.net/';
 
 const projects = [
   {
+    name: 'ArtsPark At Young Circle',
+    category: 'Lifestyle · Travel',
+    description: 'A cinematic tour of ArtsPark designed to make the audience feel as though they are walking through themselves.',
+    file: 'ArtsPark%20at%20Young%20Cicrle.mp4',
+    poster: 'Thumbnails/ArtsPark.png',
+    orientation: 'portrait',
+  },
+  {
     name: 'Cadillac LYRIQ Showcase',
     category: 'Automotive',
     description: 'I put this together to show off the LYRIQ’s sleek details, lighting, and movement in a cinematic way.',
@@ -50,6 +58,7 @@ const projects = [
     poster: 'Thumbnails/wolf-lake-park.png',
     orientation: 'portrait',
   },
+  
   {
     name: 'Mobile Social Media Demo',
     category: 'Social Media · Motion Graphics',
