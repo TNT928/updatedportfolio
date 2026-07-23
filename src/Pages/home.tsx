@@ -18,7 +18,7 @@ const Home = () => {
     controls={true}
   >
     <source
-      src="https://vanderloonmedia.b-cdn.net/Cadillac%20Broll.mp4"
+      src="https://vanderloonmedia.b-cdn.net/ArtsPark%20at%20Young%20Cicrle.mp4"
       type="video/mp4"
     />
     Your browser does not support the video tag.
