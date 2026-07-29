@@ -158,6 +158,101 @@
   border-radius: 999px;
 }
 
+.pricingSection {
+  margin-top: 72px;
+  padding: 64px 48px 56px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+.pricingIntro {
+  max-width: 760px;
+}
+
+.pricingIntro .eyebrow {
+  margin-bottom: 18px;
+}
+
+.pricingTitle {
+  margin: 0;
+  color: #f3f4f6;
+  font-size: 2rem;
+  letter-spacing: -0.4px;
+}
+
+.pricingDescription {
+  margin: 18px 0 0;
+  color: #aeb8c7;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.pricingCard {
+  min-width: 0;
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  background: rgba(10, 12, 14, 0.58);
+  border: 1px solid rgba(147, 197, 253, 0.14);
+  border-radius: 14px;
+}
+
+.pricingCard:last-child {
+  grid-column: 1 / -1;
+}
+
+.pricingCard h3 {
+  margin: 0;
+  color: #f3f4f6;
+  font-size: 1.05rem;
+}
+
+.pricingCard p {
+  margin: 8px 0 0;
+  color: #8f9bab;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.priceBlock {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.priceBlock span {
+  display: block;
+  color: #7b8999;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.priceBlock strong {
+  display: block;
+  margin-top: 3px;
+  color: #78aefc;
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+
+.pricingNote {
+  margin: 24px 0 0;
+  color: #dbeafe;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 .ctaSection {
   max-width: 760px;
   margin: 72px auto 0;
@@ -218,8 +313,32 @@
   .industriesTitle {
     font-size: 1.65rem;
   }
+  .pricingSection {
+    margin-top: 48px;
+    padding: 44px 24px 40px;
+  }
+  .pricingTitle {
+    font-size: 1.65rem;
+  }
+  .pricingGrid {
+    grid-template-columns: 1fr;
+  }
+  .pricingCard:last-child {
+    grid-column: auto;
+  }
   .ctaSection {
     margin-top: 48px;
     padding: 34px 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .pricingCard {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .priceBlock {
+    text-align: left;
   }
 }

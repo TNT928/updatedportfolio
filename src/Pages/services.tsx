@@ -5,34 +5,62 @@ import styles from '../CSS/services.module.css';
 const Services = () => {
   const serviceList = [
     {
-      title: "Videography",
-      description: "Professional high-definition camera operations, framing, and movement tailored for cinematic look and commercial content.",
+      title: "Business Video Production",
+      description: "Promotional videos, brand stories, interviews, and commercial content shaped around your message and audience.",
       icon: "🎥"
     },
     {
-      title: "Lighting Design",
-      description: "Crafting atmospheric lighting to shape depth and mood on set.",
-      icon: "💡"
+      title: "Photography",
+      description: "Professional branding, business, product, location, and event photography ready for web, print, and social media.",
+      icon: "📸"
     },
     {
-      title: "Sound & Audio Editing",
-      description: "Crisp dialogue leveling, background noise cleanup, EQ, and getting your microphone dialed in perfectly.",
-      icon: "🎙️"
+      title: "Social Media Content",
+      description: "Vertical videos and coordinated photo-and-video sessions designed to give your business fresh, usable content.",
+      icon: "📱"
     },
     {
-      title: "Video Editing",
-      description: "Finding the right pacing and assembly to turn messy raw footage into a polished, compelling video.",
+      title: "Event Coverage",
+      description: "Candid and staged photography or video coverage that captures the people, atmosphere, and important moments.",
+      icon: "🎟️"
+    },
+    {
+      title: "Editing & Post-Production",
+      description: "Video editing, color correction, sound cleanup, titles, and motion graphics that turn raw material into polished work.",
       icon: "🎬"
     },
     {
-      title: "Motion Graphics",
-      description: "Dynamic lower thirds, animated overlays, titles, and clean transitions that enhance visual branding.",
+      title: "Custom Commercial Projects",
+      description: "Tailored production plans for businesses and organizations that need a specialized scope or set of deliverables.",
       icon: "✨"
+    }
+  ];
+
+  const startingPrices = [
+    {
+      service: "Photography Sessions",
+      price: "$225",
+      detail: "Professional edited images for people, products, and brands."
     },
     {
-      title: "On-Camera Talent",
-      description: "Confident host, reviewer, or presenter capabilities with natural delivery, timing, and direct-to-lens engagement.",
-      icon: "🗣️"
+      service: "Event Photography",
+      price: "$175/hr",
+      detail: "Candid and staged coverage with a two-hour minimum."
+    },
+    {
+      service: "Single Social Video",
+      price: "$350",
+      detail: "One vertical video up to 30 seconds."
+    },
+    {
+      service: "Business Spotlight",
+      price: "$650",
+      detail: "A polished promotional video plus a short social cut."
+    },
+    {
+      service: "Photo + Video Content Session",
+      price: "$650",
+      detail: "A coordinated collection of edited photos and social videos."
     }
   ];
 
@@ -57,6 +85,37 @@ const Services = () => {
             </div>
           ))}
         </div>
+
+        <section className={styles.pricingSection} aria-labelledby="starting-prices">
+          <div className={styles.pricingIntro}>
+            <p className={styles.eyebrow}>Simple Starting Points</p>
+            <h2 id="starting-prices" className={styles.pricingTitle}>Professional content, scoped to your goals.</h2>
+            <p className={styles.pricingDescription}>
+              These starting prices help you plan. Every project receives a written scope and
+              custom quote based on production time, location, deliverables, editing,
+              licensing, and turnaround.
+            </p>
+          </div>
+
+          <div className={styles.pricingGrid}>
+            {startingPrices.map((item) => (
+              <article key={item.service} className={styles.pricingCard}>
+                <div>
+                  <h3>{item.service}</h3>
+                  <p>{item.detail}</p>
+                </div>
+                <div className={styles.priceBlock}>
+                  <span>Starting at</span>
+                  <strong>{item.price}</strong>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <p className={styles.pricingNote}>
+            Need something different? Packages can be adjusted to match your priorities and budget.
+          </p>
+        </section>
 
         <section className={styles.industriesSection}>
           <div className={styles.industriesContent}>
