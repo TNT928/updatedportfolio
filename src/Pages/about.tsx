@@ -11,8 +11,8 @@ const About = () => {
           <div className={styles.containerImage}>
             {/* Swapped backslash to forward slash for clean web routing */}
             <img
-              src="Images/Me_in_hat.jpg"
-              alt="Michael VanderLoon"
+              src="/Images/Photography/profile-headshot.jpg"
+              alt="Michael VanderLoon, owner of VanderLoon Media"
               className={`${styles.profileImage} animate__animated animate__fadeIn`}
             />
           </div>
