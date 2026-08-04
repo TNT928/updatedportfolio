@@ -39,6 +39,50 @@
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
+.socialLinks {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.socialLinks a {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.socialLinks a:hover {
+  color: #ffffff;
+  border-color: rgba(209, 165, 81, 0.5);
+  background: rgba(209, 165, 81, 0.1);
+}
+
+.socialLinks svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.socialLinks .facebookIcon {
+  fill: currentColor;
+  stroke: none;
+}
+
+.socialLinks .instagramDot {
+  fill: currentColor;
+  stroke: none;
+}
+
 /* Custom Overrides to make the standard Bootstrap Hamburger Icon clean white */
 .customToggler {
   border-color: rgba(255, 255, 255, 0.1) !important;
@@ -65,5 +109,9 @@
   .navLink {
     padding: 12px 0 !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  }
+
+  .socialLinks {
+    margin: 14px 0 4px;
   }
 }

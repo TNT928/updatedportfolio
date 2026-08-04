@@ -3,19 +3,19 @@ import styles from "./Images.module.css";
 
 const Images = () => {
   const images = [
-      "/Images/Photography/cadillac1.JPG",
-    "/Images/Photography/cadillac2.JPG",
-    "/Images/Photography/IMG_0851.JPG",
-    "/Images/Photography/IMG_0734.JPG",
-    "/Images/Photography/IMG_0764.JPG",
-    "/Images/Photography/IMG_0818.JPG",
-    "/Images/Photography/IMG_0830.JPG",
-    "/Images/Photography/IMG_0834.png",
-    "/Images/Photography/IMG_0840.JPG",
-    "/Images/Photography/IMG_0865.JPG",
-    "/Images/Photography/IMG_0869.JPG",
-    "/Images/Photography/IMG_0895.JPG",
-    "/Images/Photography/IMG_0900.JPG",
+    "/Images/Photography/web/cadillac1.jpg",
+    "/Images/Photography/web/cadillac2.jpg",
+    "/Images/Photography/web/IMG_0851.jpg",
+    "/Images/Photography/web/IMG_0734.jpg",
+    "/Images/Photography/web/IMG_0764.jpg",
+    "/Images/Photography/web/IMG_0818.jpg",
+    "/Images/Photography/web/IMG_0830.jpg",
+    "/Images/Photography/web/IMG_0834.jpg",
+    "/Images/Photography/web/IMG_0840.jpg",
+    "/Images/Photography/web/IMG_0865.jpg",
+    "/Images/Photography/web/IMG_0869.jpg",
+    "/Images/Photography/web/IMG_0895.jpg",
+    "/Images/Photography/web/IMG_0900.jpg",
   
   ];
 
@@ -36,6 +36,9 @@ const Images = () => {
           src={images[index]}
           alt={`slide-${index}`}
           className={styles.image}
+          decoding="async"
+          width="1600"
+          height="1066"
         />
       </div>
     </div>

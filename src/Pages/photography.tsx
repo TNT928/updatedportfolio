@@ -22,6 +22,15 @@ const photoCollections = [
     ],
   },
   {
+    title: 'Portraits & People',
+    description: 'Professional headshots and relaxed environmental portraits that help people and personalities stand out.',
+    photos: [
+      { file: 'profile-headshot-2.jpg', alt: 'Professional studio headshot photographed by VanderLoon Media' },
+      { file: 'jabari-park.jpg', alt: 'Outdoor portrait at a South Florida park photographed by VanderLoon Media' },
+      { file: 'derek-and-donkey.jpg', alt: 'Lifestyle portrait with a donkey at a South Florida farm photographed by VanderLoon Media' },
+    ],
+  },
+  {
     title: 'Food & Hospitality',
     description: 'Close-up details and atmosphere that make food, drinks, and a space feel worth visiting.',
     photos: [
@@ -72,10 +81,13 @@ const Photography = () => {
               {collection.photos.map((photo) => (
                 <figure className={`${styles.glassCard} animate__animated animate__fadeInUp`} key={photo.file}>
                   <img
-                    src={`/Images/Photography/${photo.file}`}
+                    src={`/Images/Photography/web/${photo.file.replace(/\.[^.]+$/, '.jpg')}`}
                     alt={photo.alt}
                     className={styles.galleryImage}
                     loading={photo.priority ? 'eager' : 'lazy'}
+                    decoding="async"
+                    width="1600"
+                    height="1066"
                   />
                 </figure>
               ))}

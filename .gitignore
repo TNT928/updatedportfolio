@@ -11,6 +11,9 @@
 # production
 /build
 
+# Full-resolution source photography is archived locally, not deployed.
+/source-images
+
 # misc
 .DS_Store
 .env.local
