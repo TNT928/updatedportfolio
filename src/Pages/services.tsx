@@ -50,7 +50,7 @@ const Services = () => {
     {
       service: "Single Social Video",
       price: "$350",
-      detail: "One vertical video up to 30 seconds."
+      detail: "One vertical video up to 1 minute."
     },
     {
       service: "Business Spotlight",
