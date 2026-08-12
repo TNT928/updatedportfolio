@@ -44,22 +44,22 @@ const Services = () => {
     },
     {
       service: "Event Photography",
-      price: "$175/hr",
+      price: "$150/hr",
       detail: "Candid and staged coverage with a two-hour minimum."
     },
     {
       service: "Single Social Video",
-      price: "$350",
+      price: "$300",
       detail: "One vertical video up to 1 minute."
     },
     {
       service: "Business Spotlight",
-      price: "$650",
+      price: "$525",
       detail: "A polished promotional video plus a short social cut."
     },
     {
       service: "Photo + Video Content Session",
-      price: "$650",
+      price: "$600",
       detail: "A coordinated collection of edited photos and social videos."
     }
   ];
