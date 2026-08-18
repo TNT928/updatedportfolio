@@ -10,7 +10,6 @@ const projects = [
     name: 'Long Key Nature Center',
     category: 'Commercial · Community',
     description: 'A promotional film capturing the people, natural setting, and welcoming character of Long Key Nature Center in Davie, Florida.',
-    result: '1.6K+ views on Facebook',
     file: 'Long%20Key%20Nature%20Center.mp4',
     poster: 'Thumbnails/Screenshot%202026-08-17%20at%203.44.53%E2%80%AFPM.png',
   },
@@ -126,9 +125,6 @@ const Projects = () => {
                 <p className={styles.category}>{project.category}</p>
                 <h2 className={styles.cardTitle}>{project.name}</h2>
                 <p className={styles.description}>{project.description}</p>
-                {project.result && (
-                  <p className={styles.result}>{project.result}</p>
-                )}
               </div>
             </article>
           ))}

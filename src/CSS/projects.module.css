@@ -116,19 +116,6 @@
   line-height: 1.6;
 }
 
-.result {
-  display: inline-block;
-  margin: 18px 0 0;
-  padding: 7px 10px;
-  color: #dbeafe;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  background: rgba(59, 130, 246, 0.12);
-  border: 1px solid rgba(147, 197, 253, 0.28);
-  border-radius: 999px;
-}
-
 .tagLine {
   font-size: 0.9rem;
   color: #9ca3af;
