@@ -16,7 +16,7 @@ const Home = () => {
     loop
     playsInline
     controls={true}
-    poster="https://vanderloonmedia.b-cdn.net/Thumbnails/Screenshot%202026-08-17%20at%203.44.53%E2%80%AFPM.png"
+    poster="https://vanderloonmedia.b-cdn.net/Thumbnails/Screenshot%202026-08-18%20at%2012.22.40%E2%80%AFPM.png"
   >
     <source
       src="https://vanderloonmedia.b-cdn.net/Long%20Key%20Nature%20Center.mp4"

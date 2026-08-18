@@ -11,7 +11,7 @@ const projects = [
     category: 'Commercial · Community',
     description: 'A promotional film capturing the people, natural setting, and welcoming character of Long Key Nature Center in Davie, Florida.',
     file: 'Long%20Key%20Nature%20Center.mp4',
-    poster: 'Thumbnails/Screenshot%202026-08-17%20at%203.44.53%E2%80%AFPM.png',
+    poster: 'Thumbnails/Screenshot%202026-08-18%20at%2012.22.40%E2%80%AFPM.png',
   },
   {
     name: 'ArtsPark At Young Circle',
