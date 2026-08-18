@@ -34,7 +34,7 @@ const Header = () => {
               </Nav.Link>
               
               <Nav.Link as={Link} to="/projects" className={styles.navLink} onClick={() => setExpanded(false)}>
-                Projects
+                Video Portfolio
               </Nav.Link>
               
               <Nav.Link as={Link} to="/photography" className={styles.navLink} onClick={() => setExpanded(false)}>

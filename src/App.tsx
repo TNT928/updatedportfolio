@@ -15,31 +15,36 @@ import Contact from "./Pages/contact";
 import Home from "./Pages/home";
 import Services from "./Pages/services";
 import Photography from "./Pages/photography";
+import Privacy from "./Pages/privacy";
 
 const pageMetadata: Record<string, { title: string; description: string }> = {
   "/": {
     title: "VanderLoon Media | Video Production & Photography in South Florida",
-    description: "VanderLoon Media creates professional video production, photography, editing, and motion graphics for businesses and brands throughout South Florida.",
+    description: "Fort Lauderdale photography and video production for businesses, events, brands, and individuals throughout South Florida. Explore our work and services.",
   },
   "/about": {
     title: "About VanderLoon Media | South Florida Video Production",
-    description: "Learn about VanderLoon Media and our approach to professional video production, photography, editing, and visual storytelling.",
+    description: "Meet Michael VanderLoon and learn how VanderLoon Media approaches photography, video production, and visual storytelling across South Florida.",
   },
   "/services": {
     title: "Video Production & Photography Services | VanderLoon Media",
-    description: "Professional video production, photography, editing, and motion graphics for South Florida businesses, events, real estate, restaurants, and automotive brands.",
+    description: "Explore photography and video production services for businesses, brands, events, products, properties, and people throughout South Florida.",
   },
   "/projects": {
     title: "Video Production Portfolio | VanderLoon Media",
-    description: "Explore video production projects from VanderLoon Media, created for brands, businesses, and visual storytelling.",
+    description: "Watch promotional, event, and storytelling videos created by VanderLoon Media for businesses and organizations across South Florida.",
   },
   "/photography": {
     title: "Photography Portfolio | VanderLoon Media",
-    description: "View photography by VanderLoon Media, including commercial, automotive, real estate, and lifestyle visuals.",
+    description: "Explore VanderLoon Media photography featuring portraits, automotive, real estate, food, hospitality, lifestyle, and commercial work.",
   },
   "/contact": {
     title: "Contact VanderLoon Media | Start Your Project",
-    description: "Contact VanderLoon Media to discuss professional video production, photography, editing, or motion graphics for your South Florida project.",
+    description: "Tell VanderLoon Media about your photography or video project in Fort Lauderdale or South Florida and request a personalized quote.",
+  },
+  "/privacy": {
+    title: "Privacy Policy | VanderLoon Media",
+    description: "Learn how VanderLoon Media handles website inquiries, analytics data, and visitor privacy.",
   },
 };
 
@@ -92,6 +97,7 @@ function App() {
           <Route path='photography' element={<Photography/>}/>
           <Route path='contact' element={<Contact/>}/>
           <Route path='services' element={<Services/>}/>
+          <Route path='privacy' element={<Privacy/>}/>
         </Routes>
         <Footer />
       </div>

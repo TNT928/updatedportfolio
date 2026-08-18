@@ -18,6 +18,7 @@ const Footer = () => {
           <Link to="/photography">Photography</Link>
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/privacy">Privacy</Link>
         </nav>
 
         <nav className={styles.socialLinks} aria-label="Social media">

@@ -1,4 +1,5 @@
 import React, { FormEvent, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../CSS/contact.module.css';
 
 const Contact = () => {
@@ -21,6 +22,14 @@ const Contact = () => {
       });
 
       if (!response.ok) throw new Error('Form submission failed');
+
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', {
+          form_name: 'project-inquiry',
+          project_type: String(formData.get('project-type') || 'not_selected'),
+        });
+      }
+
       form.reset();
       setStatus('success');
     } catch {
@@ -72,7 +81,7 @@ const Contact = () => {
             </label>
             <label>
               Project type
-              <select name="project-type" defaultValue="">
+              <select name="project-type" defaultValue="" required>
                 <option value="" disabled>Select one</option>
                 <option>Commercial / Brand Video</option>
                 <option>Photography</option>
@@ -85,10 +94,48 @@ const Contact = () => {
             </label>
           </div>
 
+          <div className={styles.twoColumns}>
+            <label>
+              Target date <span>(optional)</span>
+              <input type="date" name="target-date" />
+            </label>
+            <label>
+              Estimated budget <span>(optional)</span>
+              <select name="estimated-budget" defaultValue="">
+                <option value="" disabled>Select a range</option>
+                <option>Under $500</option>
+                <option>$500–$1,000</option>
+                <option>$1,000–$2,500</option>
+                <option>$2,500–$5,000</option>
+                <option>$5,000+</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            How did you hear about VanderLoon Media? <span>(optional)</span>
+            <select name="referral-source" defaultValue="">
+              <option value="">Select one</option>
+              <option>Google Search or Maps</option>
+              <option>Facebook</option>
+              <option>Instagram</option>
+              <option>LinkedIn</option>
+              <option>Referral</option>
+              <option>Met in person</option>
+              <option>Other</option>
+            </select>
+          </label>
+
           <label>
             Tell us about your project
             <textarea name="message" rows={6} required placeholder="What are you looking to create?" />
           </label>
+
+          <p className={styles.privacyNote}>
+            By submitting this form, you agree that VanderLoon Media may contact you about your inquiry.
+            See our <Link to="/privacy">Privacy Policy</Link>.
+          </p>
 
           <button type="submit" disabled={status === 'sending'}>
             {status === 'sending' ? 'Sending…' : 'Send Inquiry'}
@@ -105,3 +152,9 @@ const Contact = () => {
 };
 
 export default Contact;
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}

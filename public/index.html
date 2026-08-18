@@ -3,12 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2L6QMYS69"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-N2L6QMYS69');
+      if (window.location.hostname === 'vanderloonmedia.com' || window.location.hostname === 'www.vanderloonmedia.com') {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function(){window.dataLayer.push(arguments);};
+        window.gtag('js', new Date());
+        window.gtag('config', 'G-N2L6QMYS69');
+
+        var analyticsScript = document.createElement('script');
+        analyticsScript.async = true;
+        analyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-N2L6QMYS69';
+        document.head.appendChild(analyticsScript);
+      }
     </script>
     <script>
       // Restore clean URLs from the GitHub Pages 404 fallback and redirect
@@ -27,9 +33,10 @@
         }
       }(window.location));
     </script>
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="48x48" href="%PUBLIC_URL%/favicon-48x48.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -38,6 +45,27 @@
     />
     <link rel="canonical" href="https://www.vanderloonmedia.com/" />
     <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.vanderloonmedia.com/#organization",
+        "name": "VanderLoon Media",
+        "url": "https://www.vanderloonmedia.com/",
+        "logo": "https://www.vanderloonmedia.com/logo512.png",
+        "description": "Photography and video production for businesses, events, brands, and individuals throughout South Florida.",
+        "areaServed": [
+          { "@type": "City", "name": "Fort Lauderdale" },
+          { "@type": "City", "name": "Miami" },
+          { "@type": "City", "name": "Boca Raton" },
+          { "@type": "AdministrativeArea", "name": "South Florida" }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61591748057048",
+          "https://www.instagram.com/vanderloon_media/"
+        ]
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
@@ -69,6 +97,9 @@
       <input name="email" />
       <input name="phone" />
       <input name="project-type" />
+      <input name="target-date" />
+      <input name="estimated-budget" />
+      <input name="referral-source" />
       <textarea name="message"></textarea>
     </form>
     <div id="root"></div>

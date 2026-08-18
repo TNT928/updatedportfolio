@@ -86,7 +86,10 @@
   outline: none;
 }
 
-.form select option { color: #111827; }
+.form select option {
+  color: #d1a551;
+  background: #0a0c0e;
+}
 
 .form textarea { resize: vertical; }
 
@@ -114,6 +117,19 @@
 .form button:disabled { cursor: wait; opacity: 0.72; }
 
 .status { min-height: 1.5em; color: #b8d4ff; font-size: 0.9rem; }
+
+.privacyNote {
+  margin: -2px 0 0;
+  color: #8792a3;
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.privacyNote a {
+  color: #d1a551;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
 .hiddenField { display: none; }
 
