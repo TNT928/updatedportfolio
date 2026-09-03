@@ -16,10 +16,10 @@ const Home = () => {
     loop
     playsInline
     controls={true}
-    poster="https://vanderloonmedia.b-cdn.net/Thumbnails/Screenshot%202026-08-18%20at%2012.22.40%E2%80%AFPM.png"
+    poster="https://vanderloonmedia.b-cdn.net/Thumbnails/Screenshot%202026-09-03%20at%207.28.43%E2%80%AFAM.png"
   >
     <source
-      src="https://vanderloonmedia.b-cdn.net/Long%20Key%20Nature%20Center.mp4"
+      src="https://vanderloonmedia.b-cdn.net/Real%20Estate%20Demo%202.mp4"
       type="video/mp4"
     />
     Your browser does not support the video tag.
@@ -37,6 +37,10 @@ const Home = () => {
           </h2>
 
           <div className={styles.accentLine}></div>
+
+          <p className={styles.certificationBadge}>
+            <span aria-hidden="true">✦</span> FAA Part 107 Certified Drone Pilot
+          </p>
 
           <p className={styles.text}>
             VanderLoon Media is a Fort Lauderdale–based photography and video production company serving businesses, organizations, and individuals throughout South Florida. From promotional content and event coverage to portraits, products, properties, and the people behind a brand, we create polished visuals that feel true to each story.

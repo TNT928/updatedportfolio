@@ -74,6 +74,26 @@
   box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
 }
 
+.certificationBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 24px;
+  padding: 8px 14px;
+  color: #dbeafe;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(147, 197, 253, 0.28);
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.certificationBadge span {
+  color: #78aefc;
+}
+
 .text {
   font-size: 1.15rem;
   line-height: 1.75;

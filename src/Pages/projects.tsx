@@ -7,6 +7,13 @@ const bunny = 'https://vanderloonmedia.b-cdn.net/';
 
 const projects = [
   {
+    name: 'Real Estate Video Tour',
+    category: 'Real Estate',
+    description: 'A polished real estate film designed to showcase a home’s space, natural light, details, and atmosphere.',
+    file: 'Real%20Estate%20Demo%202.mp4',
+    poster: 'Thumbnails/Screenshot%202026-09-03%20at%207.28.43%E2%80%AFAM.png',
+  },
+  {
     name: 'Long Key Nature Center',
     category: 'Commercial · Community',
     description: 'A promotional film capturing the people, natural setting, and welcoming character of Long Key Nature Center in Davie, Florida.',
@@ -27,13 +34,6 @@ const projects = [
     description: 'I put this together to show off the LYRIQ’s sleek details, lighting, and movement in a cinematic way.',
     file: 'Cadillac%20Broll.mp4',
     poster: 'Thumbnails/cadillac-broll.png',
-  },
-  {
-    name: 'Real Estate Demo',
-    category: 'Real Estate',
-    description: 'A real estate demo showing how I would highlight a home’s space, light, and best features on video.',
-    file: 'Real%20Estate%20Demo.mp4',
-    poster: 'Thumbnails/real-estate-demo.png',
   },
   {
     name: 'Cadillac Social Reel',
