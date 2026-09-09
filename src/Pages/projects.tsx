@@ -14,6 +14,13 @@ const projects = [
     poster: 'Thumbnails/Screenshot%202026-09-03%20at%207.28.43%E2%80%AFAM.png',
   },
   {
+    name: 'Judy Paul Campaign Video',
+    category: 'Political Campaign · Social Media',
+    description: 'A campaign promotional video for Judy Paul, featuring on-camera presentation, supporting footage, and polished editing for social media.',
+    file: 'Judy%20Paul%20Campaign%20Promo.mp4',
+    poster: 'Thumbnails/Judy%20Paul%20Promo%20Thumbnail.png',
+  },
+  {
     name: 'Long Key Nature Center',
     category: 'Commercial · Community',
     description: 'A promotional film capturing the people, natural setting, and welcoming character of Long Key Nature Center in Davie, Florida.',
@@ -96,7 +103,7 @@ const Projects = () => {
         <header className={`${styles.headerSection} animate__animated animate__fadeIn`}>
           <h1 className={styles.title}>Video Production Portfolio</h1>
           <p className={styles.subtitle}>
-            A selection of automotive, real estate, event, social media, and motion graphics work.
+            A selection of automotive, real estate, campaign, event, social media, and motion graphics work.
           </p>
           <div className={styles.accentLine}></div>
         </header>
