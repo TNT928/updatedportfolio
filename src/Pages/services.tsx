@@ -112,6 +112,17 @@ const Services = () => {
             ))}
           </div>
 
+          <article className={styles.pricingCard} aria-labelledby="drone-add-on">
+            <div>
+              <h3 id="drone-add-on">Add Aerial Footage</h3>
+              <p>Add a few aerial shots to your video package, captured at the same location during your scheduled shoot by an FAA Part 107 certified drone pilot. Subject to weather and airspace restrictions. Separate drone sessions quoted individually.</p>
+            </div>
+            <div className={styles.priceBlock}>
+              <span>Introductory add-on</span>
+              <strong>$65</strong>
+            </div>
+          </article>
+
           <p className={styles.pricingNote}>
             Need something different? Packages can be adjusted to match your priorities and budget.
           </p>
