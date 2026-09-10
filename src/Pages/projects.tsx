@@ -21,6 +21,13 @@ const projects = [
     poster: 'Thumbnails/Judy%20Paul%20Promo%20Thumbnail.png',
   },
   {
+    name: 'Rhonda Eaton Campaign Video',
+    category: 'Political Campaign · Social Media',
+    description: 'A reelection campaign video for Rhonda Eaton, combining direct-to-camera messaging with community-focused visuals and polished editing for social media.',
+    file: 'Rhonda%20Eaton%20Election%20Video.mp4',
+    poster: 'Thumbnails/rhonda%20eaton%20video.png',
+  },
+  {
     name: 'Long Key Nature Center',
     category: 'Commercial · Community',
     description: 'A promotional film capturing the people, natural setting, and welcoming character of Long Key Nature Center in Davie, Florida.',
