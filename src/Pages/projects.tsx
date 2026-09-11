@@ -28,6 +28,13 @@ const projects = [
     poster: 'Thumbnails/rhonda%20eaton%20video.png',
   },
   {
+    name: 'Marlon Luis Campaign Video',
+    category: 'Political Campaign · Social Media',
+    description: 'A campaign video sharing Marlon Luis’s story, connection to the community, and message through on-camera storytelling and polished editing.',
+    file: 'Marlon%20Luis%20Campaign%20Video.mp4',
+    poster: 'Thumbnails/Marlon%20Luis%20Video.png',
+  },
+  {
     name: 'Long Key Nature Center',
     category: 'Commercial · Community',
     description: 'A promotional film capturing the people, natural setting, and welcoming character of Long Key Nature Center in Davie, Florida.',
@@ -78,28 +85,6 @@ const projects = [
     file: 'Wolf%20Lake%20Park%20Mobile.mp4',
     poster: 'Thumbnails/wolf-lake-park.png',
     orientation: 'portrait',
-  },
-  
-  {
-    name: 'Mobile Social Media Demo',
-    category: 'Social Media · Motion Graphics',
-    description: 'A short-form video demo showing my editing style, pacing, and use of visual effects for social content.',
-    file: 'Mobile%20Demo.mp4',
-    poster: 'Thumbnails/mobile-landscape.png',
-  },
-  {
-    name: 'Custom Title Demo',
-    category: 'Motion Graphics',
-    description: 'A quick example of the custom titles, animated text, and transitions I can add to make a video feel more polished.',
-    file: 'Custom%20Title%20Demo.mp4',
-    poster: 'Thumbnails/custom-title.png',
-  },
-  {
-    name: 'After Effects Demo',
-    category: 'Motion Graphics',
-    description: 'A motion graphics demo showing some of the animation, compositing, and visual effects work I enjoy creating.',
-    file: 'After%20Effects%20Demo%20.mp4',
-    poster: 'Thumbnails/after-effects-demo.png',
   },
 ];
 
