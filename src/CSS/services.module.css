@@ -46,57 +46,111 @@
   box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
 }
 
-/* The magic layout that fixes the single vertical line issue */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   padding: 10px 0;
 }
 
-/* Dark, translucent production-style cards */
 .card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 40px 30px;
-  backdrop-filter: blur(8px);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+  min-height: 460px;
+  overflow: hidden;
+  border: 1px solid rgba(209, 165, 81, 0.22);
+  border-radius: 14px;
+  background: #101214;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
+  text-align: left;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* High-tech hover state */
-.card:hover {
-  transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(59, 130, 246, 0.35);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
-              0 0 20px rgba(59, 130, 246, 0.05);
+.cardMedia, .card::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
 }
 
-.iconBox {
-  font-size: 2.2rem;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 12px;
-  border-radius: 12px;
-  margin-bottom: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.03);
+.cardMedia { overflow: hidden; }
+
+.cardImage, .verticalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The supplied screenshot contains a portrait frame between black sidebars.
+   Size that frame to fill the card without changing the original asset. */
+.verticalImage {
+  position: absolute;
+  width: 312.5%;
+  max-width: none;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card::after {
+  content: "";
+  background: linear-gradient(180deg, rgba(5, 7, 9, 0.03) 0%, rgba(5, 7, 9, 0.12) 28%, rgba(5, 7, 9, 0.82) 53%, #050709 100%);
+}
+
+.card:hover, .card:focus-within {
+  border-color: rgba(209, 165, 81, 0.65);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+}
+
+.cardContent {
+  width: 100%;
+  padding: 180px 26px 26px;
+}
+
+.cardAccent {
+  display: block;
+  width: 32px;
+  height: 2px;
+  margin-bottom: 18px;
+  background: #d1a551;
 }
 
 .cardTitle {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
+  line-height: 1.2;
   font-weight: 700;
-  margin-bottom: 12px;
-  color: #f3f4f6;
-  letter-spacing: -0.2px;
+  margin: 0 0 12px;
+  color: #fff;
+  letter-spacing: -0.3px;
 }
 
 .cardDescription {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
-  color: #9ca3af;
+  color: #e0e1e3;
+  margin: 0 0 18px;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  color: #e6be76;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cardLink:hover { color: #ffe0a8; text-decoration: underline; }
+.cardLink:focus-visible { outline: 2px solid #e6be76; outline-offset: 5px; }
+
+@media (min-width: 769px) and (max-width: 1020px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
 }
 
 .industriesSection {
@@ -106,8 +160,8 @@
   grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
   gap: 42px;
   align-items: center;
-  background: rgba(59, 130, 246, 0.07);
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(209, 165, 81, 0.25);
   border-radius: 20px;
 }
 
@@ -136,26 +190,26 @@
 
 .locationCopy {
   margin: 16px 0 0;
-  color: #dbeafe;
+  color: #d4d8df;
   font-size: 0.95rem;
   font-weight: 600;
   line-height: 1.6;
 }
 
 .industryList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
 .industryList span {
-  padding: 11px 14px;
-  color: #dbeafe;
-  font-size: 0.9rem;
+  padding: 16px 18px;
+  color: #d4d8df;
+  font-size: 1rem;
   font-weight: 600;
-  background: rgba(10, 12, 14, 0.45);
-  border: 1px solid rgba(147, 197, 253, 0.2);
-  border-radius: 999px;
+  background: rgba(10, 12, 14, 0.58);
+  border: 1px solid rgba(209, 165, 81, 0.25);
+  border-radius: 14px;
 }
 
 .pricingSection {
@@ -342,3 +396,34 @@
     text-align: left;
   }
 }
+
+.realEstateSection { text-align: left; border-color: rgba(209, 165, 81, 0.25); }
+.realEstateSection .eyebrow { color: #e6be76; font-size: 0.875rem; }
+.realEstateGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 32px; }
+.realEstateCard { min-width: 0; padding: 24px; border: 1px solid rgba(209, 165, 81, 0.25); border-radius: 14px; background: rgba(10, 12, 14, 0.58); }
+.realEstateCard h3 { min-height: 3.9em; margin: 0; color: #fff; font-size: 1.2rem; line-height: 1.3; }
+.realEstatePrice span { display: block; color: #b7bdc6; font-size: 0.875rem; }
+.realEstatePrice strong { display: block; color: #e6be76; font-size: 2.5rem; line-height: 1.3; margin: 4px 0 22px; }
+.realEstateCard ul { padding-left: 20px; margin: 0; color: #d4d8df; font-size: 1rem; line-height: 1.6; }
+.realEstateCard li + li { margin-top: 10px; }
+.realEstateSection .pricingNote { color: #b7bdc6; font-size: 1rem; }
+.realEstateSection > .cardLink { margin-top: 18px; }
+@media (max-width: 900px) {
+  .realEstateGrid { grid-template-columns: 1fr; }
+  .realEstateCard h3 { min-height: 0; margin-bottom: 18px; }
+}
+
+.packageDistinction {
+  margin: 20px 0 0;
+  padding: 12px 16px;
+  border-left: 3px solid #d1a551;
+  background: rgba(209, 165, 81, 0.08);
+  color: #e6be76;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.industriesSection { text-align: left; }
+.industriesSection .eyebrow { color: #e6be76; font-size: 0.875rem; }
+.industriesSection .locationCopy { color: #e6be76; font-size: 1rem; }
