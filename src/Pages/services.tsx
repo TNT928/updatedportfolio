@@ -139,7 +139,7 @@ const Services = () => {
               <h3 id="drone-add-on">Add Aerial Footage</h3>
               <div className={styles.realEstatePrice}>
                 <span>Introductory add-on</span>
-                <strong>$50</strong>
+                <strong>$65</strong>
               </div>
               <ul>
                 <li>A few aerial shots added to your video package at the same location during your scheduled shoot.</li>
@@ -163,11 +163,11 @@ const Services = () => {
           </div>
           <div className={styles.realEstateGrid}>
             {[
-              { title: 'Property Photography', price: '$199', items: ['Up to 25 professionally edited interior and exterior photos', 'Properties up to 2,000 square feet; larger properties quoted separately', 'Drone photography available as a $50 same-visit add-on'] },
+              { title: 'Property Photography', price: '$199', items: ['Up to 25 professionally edited interior and exterior photos', 'Properties up to 2,000 square feet; larger properties quoted separately', 'Drone photography available as a $65 same-visit add-on'] },
               { title: 'Property Showcase', price: '$249', items: ['Interior and exterior property footage', 'Professionally edited listing video'] },
-              { title: 'Property Showcase + Aerial', price: '$299', items: ['Everything in Property Showcase', 'Drone footage captured during the same shoot'] },
-              { title: 'Agent Showcase', price: '$399', items: ['Interior, exterior, and drone footage', 'Agent on camera with audio', 'Professionally edited listing video'] },
-              { title: 'Premium Showcase', price: '$499', items: ['Interior, exterior, and drone footage', 'Agent on camera with audio', 'Professionally edited listing video', 'Up to 25 professionally edited property photos (up to 2,000 square feet; larger properties quoted separately)'] }
+              { title: 'Property Showcase + Aerial', price: '$314', items: ['Everything in Property Showcase', 'Drone footage captured during the same shoot'] },
+              { title: 'Agent Showcase', price: '$414', items: ['Interior, exterior, and drone footage', 'Agent on camera with audio', 'Professionally edited listing video'] },
+              { title: 'Premium Showcase', price: '$514', items: ['Interior, exterior, and drone footage', 'Agent on camera with audio', 'Professionally edited listing video', 'Up to 25 professionally edited property photos (up to 2,000 square feet; larger properties quoted separately)'] }
             ].map((item) => (
               <article key={item.title} className={styles.realEstateCard}>
                 <h3>{item.title}</h3>
@@ -178,7 +178,7 @@ const Services = () => {
             <article className={styles.realEstateCard}>
               <h3>Drone Photography</h3>
               <div className={styles.realEstatePrice}>
-                <span>Same-visit add-on</span><strong>$50</strong>
+                <span>Same-visit add-on</span><strong>$65</strong>
                 <span>Standalone visit starting at</span><strong>$149</strong>
               </div>
               <ul>
