@@ -463,3 +463,20 @@
 @media (max-width: 768px) {
   .pricingDivider { margin: 32px 0; }
 }
+
+.travelPolicy {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(209, 165, 81, 0.25);
+}
+.travelPolicy h3 {
+  color: var(--brand-gold);
+  font-size: 0.9rem;
+  margin: 0 0 12px;
+}
+.travelPolicy p {
+  color: #b7bdc6;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}

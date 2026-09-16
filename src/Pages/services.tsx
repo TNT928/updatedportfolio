@@ -139,7 +139,7 @@ const Services = () => {
               <h3 id="drone-add-on">Add Aerial Footage</h3>
               <div className={styles.realEstatePrice}>
                 <span>Introductory add-on</span>
-                <strong>$65</strong>
+                <strong>$50</strong>
               </div>
               <ul>
                 <li>A few aerial shots added to your video package at the same location during your scheduled shoot.</li>
@@ -194,11 +194,13 @@ const Services = () => {
             and production scope. Video length, format, revisions, and delivery timing are
             confirmed in your written quote. Aerial footage is subject to weather and airspace restrictions.
           </p>
-          <p className={styles.pricingNote}>
-            Property Showcase + Aerial includes a $50 bundled drone-video upgrade for the same property and shoot.
-            The $65 general aerial add-on above applies to other video packages.
-          </p>
-          <Link to="/contact" className={styles.cardLink}>Request a Real Estate Quote <span aria-hidden="true">↗</span></Link>
+          <div className={styles.travelPolicy}>
+            <h3>Travel &amp; Service Area</h3>
+            <p>All services include travel within 25 driving miles of our Fort Lauderdale base.
+              Additional round-trip mileage beyond that distance is billed at $1 per mile
+              and confirmed in your quote before booking.</p>
+          </div>
+          <Link to="/contact" className={styles.cardLink}>Request a Quote <span aria-hidden="true">↗</span></Link>
         </section>
 
         <section className={styles.industriesSection}>
