@@ -312,8 +312,8 @@
   margin: 72px auto 0;
   padding: 42px 28px;
   text-align: center;
-  background: rgba(59, 130, 246, 0.07);
-  border: 1px solid rgba(59, 130, 246, 0.2);
+  background: rgba(209, 165, 81, 0.07);
+  border: 1px solid rgba(209, 165, 81, 0.2);
   border-radius: 20px;
 }
 
@@ -331,19 +331,19 @@
 
 .ctaButton {
   display: inline-block;
-  padding: 13px 20px;
-  color: #07101e;
+  padding: 14px 24px;
+  color: #15120c;
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 700;
   text-decoration: none;
-  background: #78aefc;
-  border-radius: 9px;
+  background: var(--brand-gold);
+  border-radius: 6px;
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .ctaButton:hover {
-  color: #07101e;
-  background: #a7c9ff;
+  color: #15120c;
+  background: var(--brand-gold-hover);
   transform: translateY(-2px);
 }
 
@@ -427,3 +427,31 @@
 .industriesSection { text-align: left; }
 .industriesSection .eyebrow { color: #e6be76; font-size: 0.875rem; }
 .industriesSection .locationCopy { color: #e6be76; font-size: 1rem; }
+
+
+/* Shared heading treatment inspired by the homepage's Films | Photography line. */
+.wrapper h1 {
+  font-family: var(--font-body);
+  font-size: clamp(1.65rem, 3.4vw, 2.6rem);
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  line-height: 1.45;
+  text-transform: uppercase;
+  color: var(--brand-cream);
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  text-wrap: balance;
+}
+.wrapper h2,
+.wrapper h3 {
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.09em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+@media (max-width: 600px) {
+  .wrapper h1 { letter-spacing: 0.1em; }
+  .wrapper h2, .wrapper h3 { letter-spacing: 0.06em; }
+}

@@ -20,7 +20,7 @@
 }
 
 .brandLink:hover {
-  color: #3b82f6 !important; /* Glows your signature brand blue on hover */
+  color: var(--brand-gold) !important; /* Glows your signature brand gold on hover */
 }
 
 /* Navigation Menu Item Typography Links */
@@ -95,7 +95,7 @@
 }
 
 .customToggler:focus {
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important; /* Electric blue ring focus box */
+  box-shadow: 0 0 0 3px rgba(209, 165, 81, 0.25) !important; /* Gold ring focus box */
   outline: none !important;
 }
 

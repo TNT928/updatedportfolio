@@ -7,6 +7,13 @@ const bunny = 'https://vanderloonmedia.b-cdn.net/';
 
 const projects = [
   {
+    name: 'Drone Demo',
+    category: 'Aerial · Demo',
+    description: 'An aerial video demo exploring a different perspective through drone footage.',
+    file: 'Drone%20Demo.mp4',
+    poster: 'Thumbnails/Drone%20Demo%20Thumbnail.png',
+  },
+  {
     name: 'Real Estate Video Tour',
     category: 'Real Estate',
     description: 'A polished real estate film designed to showcase a home’s space, natural light, details, and atmosphere.',
@@ -95,7 +102,7 @@ const Projects = () => {
         <header className={`${styles.headerSection} animate__animated animate__fadeIn`}>
           <h1 className={styles.title}>Video Production Portfolio</h1>
           <p className={styles.subtitle}>
-            A selection of automotive, real estate, campaign, event, social media, and motion graphics work.
+            A selection of aerial, automotive, real estate, campaign, event, social media, and motion graphics work.
           </p>
           <div className={styles.accentLine}></div>
         </header>

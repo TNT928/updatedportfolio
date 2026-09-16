@@ -2,7 +2,7 @@
   padding: 18px 20px;
   color: #aeb8c7;
   background: #07090c;
-  border-top: 1px solid rgba(147, 197, 253, 0.12);
+  border-top: 1px solid rgba(209, 165, 81, 0.12);
 }
 
 .content {
@@ -73,11 +73,11 @@
 .navigation a:hover,
 .email:hover,
 .socialLinks a:hover {
-  color: #a7c9ff;
+  color: var(--brand-gold-hover);
 }
 
 .email {
-  color: #dbeafe;
+  color: var(--brand-cream);
   font-weight: 600;
   white-space: nowrap;
 }

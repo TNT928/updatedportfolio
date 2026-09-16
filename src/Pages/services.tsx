@@ -61,17 +61,17 @@ const Services = () => {
     },
     {
       service: "Single Social Video",
-      price: "$300",
-      detail: "One vertical video up to 1 minute."
+      price: "$299",
+      detail: "Includes one hour of filming and one vertical video up to 1 minute."
     },
     {
       service: "Business Spotlight",
-      price: "$525",
+      price: "$499",
       detail: "A polished promotional video plus a short social cut."
     },
     {
       service: "Photo + Video Content Session",
-      price: "$600",
+      price: "$589",
       detail: "A coordinated collection of edited photos and social videos."
     }
   ];

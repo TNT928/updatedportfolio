@@ -1,73 +1,78 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "../CSS/home.module.css";
-import "animate.css";
 
 const Home = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updatePlayback = () => {
+      if (preference.matches) videoRef.current?.pause();
+      else videoRef.current?.play().catch(() => setPlaying(false));
+    };
+    updatePlayback();
+    preference.addEventListener("change", updatePlayback);
+    return () => preference.removeEventListener("change", updatePlayback);
+  }, []);
+
+  const togglePlayback = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (video.paused) video.play().catch(() => setPlaying(false));
+    else video.pause();
+  };
+
   return (
-    <div className={styles.wrapper}>
-
-      {/* VIDEO HERO */}
-  <div className={styles.videoHero}>
-  <video
-    className={styles.videoPlayer}
-    autoPlay
-    muted
-    loop
-    playsInline
-    controls={true}
-    poster="https://vanderloonmedia.b-cdn.net/Thumbnails/Screenshot%202026-09-03%20at%207.28.43%E2%80%AFAM.png"
-  >
-    <source
-      src="https://vanderloonmedia.b-cdn.net/Real%20Estate%20Demo%202.mp4"
-      type="video/mp4"
-    />
-    Your browser does not support the video tag.
-  </video>
-</div>
-
-      {/* TEXT SECTION ONLY */}
-      <div className={styles.bodyWrapper}>
-        
-        <div className={`${styles.leftSide} animate__animated animate__zoomIn`}>
-          <h1 className={styles.header}>  <span style={{color:"#D1A551"}} >VanderLoon</span> <span style={{color:"#F2E1C9"}}>Media</span></h1>
-          
-          <h2 className={styles.subheader}>
-            Films | Photography 
-          </h2>
-
-          <div className={styles.accentLine}></div>
-
-          <p className={styles.certificationBadge}>
-            <span aria-hidden="true">✦</span> FAA Part 107 Certified Drone Pilot
+    <main className={styles.wrapper}>
+      <section className={styles.hero} aria-labelledby="home-heading">
+        <video
+          ref={videoRef}
+          className={styles.video}
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="https://vanderloonmedia.b-cdn.net/Thumbnails/Drone%20Demo%20Thumbnail.png"
+          aria-hidden="true"
+          onPlay={() => setPlaying(true)}
+          onPause={() => setPlaying(false)}
+          onError={() => setPlaying(false)}
+        >
+          <source src="https://vanderloonmedia.b-cdn.net/Website%20video.mp4" type="video/mp4" />
+        </video>
+        <div className={styles.overlay} />
+        <div className={styles.heroContent}>
+          <p className={styles.eyebrow}>Fort Lauderdale · South Florida</p>
+          <h1 id="home-heading" className={styles.header}>
+            <span>VanderLoon</span> Media
+          </h1>
+          <p className={styles.subheader}>Films | Photography</p>
+          <p className={styles.heroText}>
+            Photography and video that bring your business, your people, and your story into focus.
           </p>
-
-          <p className={styles.text}>
-            VanderLoon Media is a Fort Lauderdale–based photography and video production company serving businesses, organizations, and individuals throughout South Florida. From promotional content and event coverage to portraits, products, properties, and the people behind a brand, we create polished visuals that feel true to each story.
-
-            Whether you need a single photo session or a complete video project, we take the time to understand your goals and create content that connects with your audience.
-          </p>
-
           <div className={styles.ctaGroup}>
-            <Link to="/services" className={styles.primaryCta}>View Services</Link>
+            <Link to="/projects" className={styles.primaryCta}>Watch Our Work</Link>
             <Link to="/contact" className={styles.secondaryCta}>Start Your Project</Link>
           </div>
-
-          {/* <div className={styles.linkContainer}>
-            <p className={styles.linkLabel}>Check out my Youtube Channel:</p>
-            <a
-              href="https://www.youtube.com/@ShowtimeandJoysticks"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.youtubeLink}
-            >
-              🎥 Showtime and Joysticks
-            </a>
-          </div> */}
         </div>
-
-      </div>
-    </div>
+        <button type="button" className={styles.playback} onClick={togglePlayback}
+          aria-label={playing ? "Pause background video" : "Play background video"}>
+          {playing ? "Ⅱ Pause video" : "▷ Play video"}
+        </button>
+      </section>
+      <section className={styles.intro} aria-label="About VanderLoon Media">
+        <p className={styles.certificationBadge}>✦ FAA Part 107 Certified Drone Pilot</p>
+        <p>
+          VanderLoon Media is a Fort Lauderdale–based photography and video production company serving businesses, organizations, and individuals throughout South Florida. From promotional content and event coverage to portraits, products, properties, and the people behind a brand, we create polished visuals that feel true to each story.
+        </p>
+        <p>
+          Whether you need a single photo session or a complete video project, we take the time to understand your goals and create content that connects with your audience.
+        </p>
+        <Link to="/services" className={styles.servicesLink}>Explore Our Services →</Link>
+      </section>
+    </main>
   );
 };
 

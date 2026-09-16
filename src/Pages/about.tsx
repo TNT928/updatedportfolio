@@ -13,7 +13,7 @@ const About = () => {
             <img
               src="/Images/Photography/profile-headshot.jpg"
               alt="Michael VanderLoon, owner of VanderLoon Media"
-              className={`${styles.profileImage} animate__animated animate__fadeIn`}
+              className={styles.profileImage}
             />
           </div>
         </div>
