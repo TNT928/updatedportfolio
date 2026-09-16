@@ -455,3 +455,11 @@
   .wrapper h1 { letter-spacing: 0.1em; }
   .wrapper h2, .wrapper h3 { letter-spacing: 0.06em; }
 }
+
+.pricingDivider {
+  margin: 48px 0;
+  border-top: 1px solid rgba(209, 165, 81, 0.25);
+}
+@media (max-width: 768px) {
+  .pricingDivider { margin: 32px 0; }
+}

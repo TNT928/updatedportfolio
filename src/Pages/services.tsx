@@ -152,9 +152,7 @@ const Services = () => {
           <p className={styles.pricingNote}>
             Need something different? Packages can be adjusted to match your priorities and budget.
           </p>
-        </section>
-
-        <section className={`${styles.pricingSection} ${styles.realEstateSection}`} aria-labelledby="real-estate-prices">
+          <div className={styles.pricingDivider} />
           <div className={styles.pricingIntro}>
             <p className={styles.eyebrow}>Real Estate Video</p>
             <h2 id="real-estate-prices" className={styles.pricingTitle}>Show the property. Tell its story.</h2>
