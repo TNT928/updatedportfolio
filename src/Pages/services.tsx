@@ -50,7 +50,7 @@ const Services = () => {
 
   const startingPrices = [
     {
-      service: "Photography Sessions",
+      service: "Brand & Portrait Photography",
       price: "$225",
       detail: "Professional edited images for people, products, and brands."
     },
