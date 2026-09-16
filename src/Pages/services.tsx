@@ -56,7 +56,7 @@ const Services = () => {
     },
     {
       service: "Event Photography",
-      price: "$150/hr",
+      price: "$175/hr",
       detail: "Candid and staged coverage with a two-hour minimum."
     },
     {
