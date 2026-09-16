@@ -156,17 +156,17 @@ const Services = () => {
           <div className={styles.pricingIntro}>
             <p className={styles.eyebrow}>Real Estate Video</p>
             <h2 id="real-estate-prices" className={styles.pricingTitle}>Show the property. Tell its story.</h2>
-            <p className={styles.packageDistinction}>Video only — photography quoted separately.</p>
             <p className={styles.pricingDescription}>
-              Listing video packages for South Florida properties, with options for aerial footage
-              and an on-camera agent presentation.
+              Listing media packages for South Florida properties, with options for aerial footage,
+              an on-camera agent presentation, and professional photography.
             </p>
           </div>
           <div className={styles.realEstateGrid}>
             {[
               { title: 'Property Showcase', price: '$249', items: ['Interior and exterior property footage', 'Professionally edited listing video'] },
               { title: 'Property Showcase + Aerial', price: '$299', items: ['Everything in Property Showcase', 'Drone footage captured during the same shoot'] },
-              { title: 'Agent Showcase', price: '$399', items: ['Interior, exterior, and drone footage', 'Agent on camera with audio', 'Professionally edited listing video'] }
+              { title: 'Agent Showcase', price: '$399', items: ['Interior, exterior, and drone footage', 'Agent on camera with audio', 'Professionally edited listing video'] },
+              { title: 'Premium Showcase', price: '$499', items: ['Interior, exterior, and drone footage', 'Agent on camera with audio', 'Professionally edited listing video', 'Professional property photos'] }
             ].map((item) => (
               <article key={item.title} className={styles.realEstateCard}>
                 <h3>{item.title}</h3>
@@ -176,7 +176,7 @@ const Services = () => {
             ))}
           </div>
           <p className={styles.pricingNote}>
-            Photography is quoted separately. Final pricing depends on property size, location,
+            Professional photos are included in Premium Showcase. Final pricing depends on property size, location,
             and production scope. Video length, format, revisions, and delivery timing are
             confirmed in your written quote. Aerial footage is subject to weather and airspace restrictions.
           </p>
