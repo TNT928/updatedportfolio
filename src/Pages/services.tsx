@@ -163,10 +163,11 @@ const Services = () => {
           </div>
           <div className={styles.realEstateGrid}>
             {[
+              { title: 'Property Photography', price: '$199', items: ['Up to 25 professionally edited interior and exterior photos', 'Properties up to 2,000 square feet; larger properties quoted separately', 'Drone photography quoted separately'] },
               { title: 'Property Showcase', price: '$249', items: ['Interior and exterior property footage', 'Professionally edited listing video'] },
               { title: 'Property Showcase + Aerial', price: '$299', items: ['Everything in Property Showcase', 'Drone footage captured during the same shoot'] },
               { title: 'Agent Showcase', price: '$399', items: ['Interior, exterior, and drone footage', 'Agent on camera with audio', 'Professionally edited listing video'] },
-              { title: 'Premium Showcase', price: '$499', items: ['Interior, exterior, and drone footage', 'Agent on camera with audio', 'Professionally edited listing video', 'Professional property photos'] }
+              { title: 'Premium Showcase', price: '$499', items: ['Interior, exterior, and drone footage', 'Agent on camera with audio', 'Professionally edited listing video', 'Up to 25 professionally edited property photos (up to 2,000 square feet; larger properties quoted separately)'] }
             ].map((item) => (
               <article key={item.title} className={styles.realEstateCard}>
                 <h3>{item.title}</h3>
