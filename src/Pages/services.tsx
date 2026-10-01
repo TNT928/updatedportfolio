@@ -151,7 +151,7 @@ const Services = () => {
           </div>
 
           <p className={styles.pricingNote}>
-            Need something different? Packages can be adjusted to match your priorities and budget.
+            Video packages include two rounds of revisions. Need something different? Packages can be adjusted to match your priorities and budget.
           </p>
           <div className={styles.pricingDivider} />
           <div className={styles.pricingIntro}>
@@ -192,8 +192,9 @@ const Services = () => {
           </div>
           <p className={styles.pricingNote}>
             Professional photos are included in Premium Showcase. Final pricing depends on property size, location,
-            and production scope. Video length, format, revisions, and delivery timing are
-            confirmed in your written quote. Aerial footage is subject to weather and airspace restrictions.
+            and production scope. Property video packages include two rounds of revisions.
+            Video length, format, and delivery timing are confirmed in your written quote.
+            Aerial footage is subject to weather and airspace restrictions.
           </p>
           <div className={styles.travelPolicy}>
             <h3>Travel &amp; Service Area</h3>
