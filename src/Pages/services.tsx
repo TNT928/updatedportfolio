@@ -66,8 +66,9 @@ const Services = () => {
     },
     {
       service: "Business Spotlight",
-      price: "$499",
-      detail: "A polished promotional video plus a short social cut."
+      price: "Custom quote",
+      priceLabel: "Pricing",
+      detail: "A promotional video and short social cut, scoped around your filming, editing, and delivery needs."
     },
     {
       service: "Photo + Video Content Session",
@@ -129,8 +130,8 @@ const Services = () => {
               <article key={item.service} className={styles.realEstateCard}>
                 <h3>{item.service}</h3>
                 <div className={styles.realEstatePrice}>
-                  <span>Starting at</span>
-                  <strong>{item.price}</strong>
+                  <span>{item.priceLabel ?? 'Starting at'}</span>
+                  <strong className={item.priceLabel ? styles.customQuotePrice : undefined}>{item.price}</strong>
                 </div>
                 <ul><li>{item.detail}</li></ul>
               </article>
