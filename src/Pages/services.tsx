@@ -62,7 +62,7 @@ const Services = () => {
     {
       service: "Single Social Video",
       price: "$299",
-      detail: "Includes one hour of filming and one vertical video up to 1 minute."
+      detail: "An on-camera video with up to one hour of filming and one edited vertical video up to 1 minute."
     },
     {
       service: "Business Spotlight",
@@ -165,7 +165,7 @@ const Services = () => {
           <div className={styles.realEstateGrid}>
             {[
               { title: 'Property Photography', price: '$199', items: ['Up to 25 professionally edited interior and exterior photos', 'Properties up to 2,000 square feet; larger properties quoted separately', 'Drone photography available as a $65 same-visit add-on'] },
-              { title: 'Property Showcase', price: '$249', items: ['Interior and exterior property footage', 'Professionally edited listing video'] },
+              { title: 'Property Showcase', price: '$249', items: ['A polished interior-and-exterior walkthrough set to music, without an on-camera presentation'] },
               { title: 'Property Showcase + Aerial', price: '$314', items: ['Everything in Property Showcase', 'Drone footage captured during the same shoot'] },
               { title: 'Agent Showcase', price: '$414', items: ['Interior, exterior, and drone footage', 'Agent on camera with audio', 'Professionally edited listing video'] },
               { title: 'Premium Showcase', price: '$514', items: ['Interior, exterior, and drone footage', 'Agent on camera with audio', 'Professionally edited listing video', 'Up to 25 professionally edited property photos (up to 2,000 square feet; larger properties quoted separately)'] }
