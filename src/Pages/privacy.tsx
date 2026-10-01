@@ -64,7 +64,7 @@ const Privacy = () => (
         <h2>Contact</h2>
         <p>
           To ask a privacy question or request access, correction, or deletion of information you submitted,
-          email <a href="mailto:vanderloonmedia@gmail.com">vanderloonmedia@gmail.com</a>.
+          email <a href="mailto:michael@vanderloonmedia.com">michael@vanderloonmedia.com</a>.
         </p>
       </section>
     </article>

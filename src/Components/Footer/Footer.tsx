@@ -49,8 +49,8 @@ const Footer = () => {
         </nav>
 
         <div className={styles.meta}>
-          <a className={styles.email} href="mailto:vanderloonmedia@gmail.com">
-            vanderloonmedia@gmail.com
+          <a className={styles.email} href="mailto:michael@vanderloonmedia.com">
+            michael@vanderloonmedia.com
           </a>
           <span>© {year}</span>
         </div>
