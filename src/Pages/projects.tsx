@@ -42,6 +42,20 @@ const projects = [
     poster: 'Thumbnails/Marlon%20Luis%20Video.png',
   },
   {
+    name: 'How We Spend Your Tax Dollars',
+    category: 'Marlon Luis · Political Campaign',
+    description: 'A campaign video for Marlon Luis focused on how tax dollars are spent and what responsible local leadership should prioritize.',
+    file: 'Tax%20Dollars%20Campaign%20Video.mp4',
+    poster: 'Thumbnails/marlon%20luis%20tax%20dollars.png',
+  },
+  {
+    name: 'Pompano Beach Is Growing',
+    category: 'Rhonda Eaton · Political Campaign',
+    description: 'A campaign video for Rhonda Eaton about Pompano Beach’s growth and the importance of thoughtful leadership as the city moves forward.',
+    file: 'Pompano%20is%20growing%20Campaign%20Video.mp4',
+    poster: 'Thumbnails/pompano%20is%20growing.png',
+  },
+  {
     name: 'Long Key Nature Center',
     category: 'Commercial · Community',
     description: 'A promotional film capturing the people, natural setting, and welcoming character of Long Key Nature Center in Davie, Florida.',
