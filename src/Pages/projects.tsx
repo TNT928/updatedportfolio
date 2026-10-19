@@ -63,6 +63,13 @@ const projects = [
     poster: 'Thumbnails/Screenshot%202026-08-18%20at%2012.22.40%E2%80%AFPM.png',
   },
   {
+    name: 'Cars & Coffee with Cops',
+    category: 'Automotive · Event Coverage',
+    description: 'Event coverage highlighting the exotic cars, community atmosphere, and standout details at Cars & Coffee with Cops in Davie, Florida.',
+    file: 'Coffee%20and%20Cars%20with%20Cops.mp4',
+    poster: 'Thumbnails/Screenshot%202026-10-19%20at%2012.46.04%E2%80%AFPM.png',
+  },
+  {
     name: 'ArtsPark At Young Circle',
     category: 'Lifestyle · Travel',
     description: 'A cinematic tour of ArtsPark designed to make the audience feel as though they are walking through themselves.',
