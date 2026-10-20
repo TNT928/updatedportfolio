@@ -8,7 +8,15 @@ const photoCollections = [
     title: 'Automotive',
     description: 'Detail-focused images that show off the design, lighting, and personality of every vehicle.',
     photos: [
-      { file: 'cadillac1.JPG', alt: 'Cadillac LYRIQ front detail photographed at dusk by VanderLoon Media', priority: true },
+      { file: 'cars-coffee-lamborghini-pair.jpg', alt: 'Orange and blue-green Lamborghinis displayed at Cars and Coffee with Cops in Davie, Florida', priority: true },
+      { file: 'cars-coffee-orange-lamborghini.jpg', alt: 'Front view of a custom orange Lamborghini at Cars and Coffee with Cops in Davie, Florida' },
+      { file: 'cars-coffee-white-lamborghini.jpg', alt: 'White Lamborghini photographed beneath palm trees at Cars and Coffee with Cops in Davie, Florida' },
+      { file: 'cars-coffee-matte-black-lamborghini.jpg', alt: 'Matte black Lamborghini Sterrato photographed at Cars and Coffee with Cops in Davie, Florida' },
+      { file: 'cars-coffee-white-lamborghini-urus.jpg', alt: 'White Lamborghini Urus photographed head-on at Cars and Coffee with Cops in Davie, Florida' },
+      { file: 'cars-coffee-yellow-lamborghini-urus.jpg', alt: 'Yellow Lamborghini Urus photographed at Cars and Coffee with Cops in Davie, Florida' },
+      { file: 'cars-coffee-blue-green-lamborghini.jpg', alt: 'Blue and green custom Lamborghini photographed from the rear at Cars and Coffee with Cops in Davie, Florida' },
+      { file: 'cars-coffee-rolls-royce.jpg', alt: 'Gold and white Rolls-Royce convertible photographed at Cars and Coffee with Cops in Davie, Florida' },
+      { file: 'cadillac1.JPG', alt: 'Cadillac LYRIQ front detail photographed at dusk by VanderLoon Media' },
       { file: 'cadillac2.JPG', alt: 'Cadillac LYRIQ automotive photography at dusk by VanderLoon Media' },
       { file: 'IMG_0851.JPG', alt: 'Red luxury car photographed by VanderLoon Media' },
     ],
@@ -87,7 +95,7 @@ const Photography = () => {
                     loading={photo.priority ? 'eager' : 'lazy'}
                     decoding="async"
                     width="1600"
-                    height="1066"
+                    height={photo.file === 'cars-coffee-rolls-royce.jpg' ? '1301' : '1066'}
                   />
                 </figure>
               ))}
