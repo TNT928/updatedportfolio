@@ -119,8 +119,7 @@ const Services = () => {
           </div>
 
           <p className={styles.startingInvestment}>
-            Most projects begin around <strong>$500</strong>. Final pricing depends on the production scope,
-            filming time, locations, and deliverables.
+            Projects begin at <strong>$299</strong>, with most business productions ranging from <strong>$500 to $1,200</strong>.
           </p>
           <p className={styles.pricingNote}>
             Clear scope. No surprise charges. Every proposal outlines the production plan, deliverables, timeline, and investment before work begins.
