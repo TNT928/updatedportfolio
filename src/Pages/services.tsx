@@ -45,35 +45,14 @@ const Services = () => {
       image: "/Images/services/IMG_0845 touched up.png",
       position: "50% 25%",
       vertical: false
-    }
-  ];
-
-  const startingPrices = [
-    {
-      service: "Brand & Portrait Photography",
-      price: "$225",
-      detail: "Professional edited images for people, products, and brands."
     },
     {
-      service: "Event Photography",
-      price: "$175/hr",
-      detail: "Candid and staged coverage with a two-hour minimum."
-    },
-    {
-      service: "Single Social Video",
-      price: "$299",
-      detail: "An on-camera video with up to one hour of filming and one edited vertical video up to 1 minute."
-    },
-    {
-      service: "Business Spotlight",
-      price: "Custom quote",
-      priceLabel: "Pricing",
-      detail: "A promotional video and short social cut, scoped around your filming, editing, and delivery needs."
-    },
-    {
-      service: "Photo + Video Content Session",
-      price: "$589",
-      detail: "A coordinated collection of edited photos and social videos."
+      title: "Real Estate Media",
+      description: "Professional property photography, cinematic walkthroughs, aerial footage, and agent-led videos designed to help listings stand out.",
+      image: "https://vanderloonmedia.b-cdn.net/Thumbnails/Screenshot%202026-09-03%20at%207.28.43%E2%80%AFAM.png",
+      position: "50% 50%",
+      vertical: false,
+      featured: true
     }
   ];
 
@@ -91,7 +70,7 @@ const Services = () => {
         {/* Services Grid */}
         <div className={styles.grid}>
           {serviceList.map((service, index) => (
-            <article key={service.title} className={styles.card}>
+            <article key={service.title} className={`${styles.card} ${service.featured ? styles.featuredCard : ''}`}>
               <div className={styles.cardMedia} aria-hidden="true">
                 <img
                   src={service.image}
@@ -114,95 +93,39 @@ const Services = () => {
           ))}
         </div>
 
-        <section className={`${styles.pricingSection} ${styles.realEstateSection}`} aria-labelledby="starting-prices">
+        <section className={`${styles.pricingSection} ${styles.realEstateSection}`} aria-labelledby="custom-production">
           <div className={styles.pricingIntro}>
-            <p className={styles.eyebrow}>Simple Starting Points</p>
-            <h2 id="starting-prices" className={styles.pricingTitle}>Professional content, scoped to your goals.</h2>
+            <p className={styles.eyebrow}>Custom Production</p>
+            <h2 id="custom-production" className={styles.pricingTitle}>Your project deserves more than a preset package.</h2>
             <p className={styles.pricingDescription}>
-              These starting prices help you plan. Every project receives a written scope and
-              custom quote based on production time, location, deliverables, editing,
-              licensing, and turnaround.
+              Every production is shaped around your audience, goals, filming needs, and final deliverables.
+              After a brief conversation, you’ll receive a clear written proposal with a defined scope and fixed project quote.
             </p>
           </div>
 
-          <div className={styles.realEstateGrid}>
-            {startingPrices.map((item) => (
-              <article key={item.service} className={styles.realEstateCard}>
-                <h3>{item.service}</h3>
-                <div className={styles.realEstatePrice}>
-                  <span>{item.priceLabel ?? 'Starting at'}</span>
-                  <strong className={item.priceLabel ? styles.customQuotePrice : undefined}>{item.price}</strong>
-                </div>
-                <ul><li>{item.detail}</li></ul>
-              </article>
-            ))}
-            <article className={styles.realEstateCard} aria-labelledby="drone-add-on">
-              <h3 id="drone-add-on">Add Aerial Footage</h3>
-              <div className={styles.realEstatePrice}>
-                <span>Introductory add-on</span>
-                <strong>$65</strong>
-              </div>
-              <ul>
-                <li>A few aerial shots added to your video package at the same location during your scheduled shoot.</li>
-                <li>Captured by an FAA Part 107 certified drone pilot.</li>
-                <li>Subject to weather and airspace restrictions. Separate drone sessions quoted individually.</li>
-              </ul>
-            </article>
+          <div className={styles.projectProcess} aria-label="How project pricing works">
+            <div className={styles.processStep}>
+              <span>01</span>
+              <div><h3>Share your vision</h3><p>Tell us what you are creating, who it needs to reach, and where it will be used.</p></div>
+            </div>
+            <div className={styles.processStep}>
+              <span>02</span>
+              <div><h3>Receive a clear proposal</h3><p>We define the production scope, deliverables, timeline, and fixed project quote.</p></div>
+            </div>
+            <div className={styles.processStep}>
+              <span>03</span>
+              <div><h3>Bring it to life</h3><p>From planning through final delivery, every detail is handled with intention.</p></div>
+            </div>
           </div>
 
-          <p className={styles.pricingNote}>
-            Video packages include two rounds of revisions. Need something different? Packages can be adjusted to match your priorities and budget.
+          <p className={styles.startingInvestment}>
+            Most projects begin around <strong>$500</strong>. Final pricing depends on the production scope,
+            filming time, locations, and deliverables.
           </p>
-          <div className={styles.pricingDivider} />
-          <div className={styles.pricingIntro}>
-            <p className={styles.eyebrow}>Real Estate Photography &amp; Video</p>
-            <h2 id="real-estate-prices" className={styles.pricingTitle}>Show the property. Tell its story.</h2>
-            <p className={styles.pricingDescription}>
-              Listing media packages for South Florida properties, with options for aerial footage,
-              an on-camera agent presentation, and professional photography.
-            </p>
-          </div>
-          <div className={styles.realEstateGrid}>
-            {[
-              { title: 'Property Photography', price: '$199', items: ['Up to 25 professionally edited interior and exterior photos', 'Properties up to 2,000 square feet; larger properties quoted separately', 'Drone photography available as a $65 same-visit add-on'] },
-              { title: 'Property Showcase', price: '$249', items: ['A polished interior-and-exterior walkthrough set to music, without an on-camera presentation'] },
-              { title: 'Property Showcase + Aerial', price: '$314', items: ['Everything in Property Showcase', 'Drone footage captured during the same shoot'] },
-              { title: 'Agent Showcase', price: '$414', items: ['Interior, exterior, and drone footage', 'Agent on camera with audio', 'Professionally edited listing video'] },
-              { title: 'Premium Showcase', price: '$514', items: ['Interior, exterior, and drone footage', 'Agent on camera with audio', 'Professionally edited listing video', 'Up to 25 professionally edited property photos (up to 2,000 square feet; larger properties quoted separately)'] }
-            ].map((item) => (
-              <article key={item.title} className={styles.realEstateCard}>
-                <h3>{item.title}</h3>
-                <div className={styles.realEstatePrice}><span>Starting at</span><strong>{item.price}</strong></div>
-                <ul>{item.items.map((detail) => <li key={detail}>{detail}</li>)}</ul>
-              </article>
-            ))}
-            <article className={styles.realEstateCard}>
-              <h3>Drone Photography</h3>
-              <div className={styles.realEstatePrice}>
-                <span>Same-visit add-on</span><strong>$65</strong>
-                <span>Standalone visit starting at</span><strong>$149</strong>
-              </div>
-              <ul>
-                <li>5–8 professionally edited aerial photos of one property.</li>
-                <li>Add-on applies to the same property during your scheduled shoot.</li>
-                <li>Standalone visits within our normal service area; additional travel quoted separately.</li>
-                <li>Subject to weather and airspace restrictions.</li>
-              </ul>
-            </article>
-          </div>
           <p className={styles.pricingNote}>
-            Professional photos are included in Premium Showcase. Final pricing depends on property size, location,
-            and production scope. Property video packages include two rounds of revisions.
-            Video length, format, and delivery timing are confirmed in your written quote.
-            Aerial footage is subject to weather and airspace restrictions.
+            Clear scope. No surprise charges. Every proposal outlines the production plan, deliverables, timeline, and investment before work begins.
           </p>
-          <div className={styles.travelPolicy}>
-            <h3>Travel &amp; Service Area</h3>
-            <p>All services include travel within 25 driving miles of our Fort Lauderdale base.
-              Additional round-trip mileage beyond that distance is billed at $1 per mile
-              and confirmed in your quote before booking.</p>
-          </div>
-          <Link to="/contact" className={styles.cardLink}>Request a Quote <span aria-hidden="true">↗</span></Link>
+          <Link to="/contact" className={styles.cardLink}>Plan Your Project <span aria-hidden="true">↗</span></Link>
         </section>
 
         <section className={styles.industriesSection}>
