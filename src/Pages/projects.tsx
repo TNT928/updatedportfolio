@@ -7,6 +7,13 @@ const bunny = 'https://vanderloonmedia.b-cdn.net/';
 
 const projects = [
   {
+    name: 'Fort Lauderdale 90s Vibe',
+    category: 'Lifestyle · Creative Editing',
+    description: 'Fort Lauderdale Beach with a nostalgic 90s home-video look, featuring custom Apple Motion effects, analog texture, and classic 4:3 framing.',
+    file: 'Fort%20Lauderdale%2090s%20Vibe.mp4',
+    poster: 'Thumbnails/Screenshot%202026-11-02%20at%202.19.46%E2%80%AFPM.png',
+  },
+  {
     name: 'Drone Demo',
     category: 'Aerial · Demo',
     description: 'An aerial video demo exploring a different perspective through drone footage.',
