@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from '../CSS/photography.module.css';
 import 'animate.css';
 
-const photoCollections = [
+const photoCollections: { title: string; description: string; photos: { file: string; alt: string; priority?: boolean; height?: number }[] }[] = [
   {
     title: 'Automotive',
     description: 'Detail-focused images that show off the design, lighting, and personality of every vehicle.',
@@ -36,6 +36,18 @@ const photoCollections = [
       { file: 'real-estate-hotel-atrium.jpg', alt: 'Multi-story hotel atrium with skylights and indoor palms' },
       { file: 'real-estate-covered-porch.jpg', alt: 'Covered front porch with potted plants overlooking a lawn' },
       { file: 'real-estate-home-office.jpg', alt: 'Home office with a desk, ceiling fan, and exercise equipment' },
+    ],
+  },
+  {
+    title: 'Drone & Aerial',
+    description: 'See how a property sits within its surroundings, from overhead details to wide neighborhood views.',
+    photos: [
+      { file: 'drone-aerial-21.jpg', alt: 'Wide aerial view of homes surrounding a lake', height: 1200 },
+      { file: 'drone-aerial-18.jpg', alt: 'Drone view along a residential street lined with tile-roof homes', height: 1200 },
+      { file: 'drone-aerial-20.jpg', alt: 'Overhead view of neighboring homes with bright blue pools', height: 1200 },
+      { file: 'drone-aerial-23.jpg', alt: 'Overhead view of a curving street, backyards, and pools', height: 1200 },
+      { file: 'drone-aerial-14.jpg', alt: 'Overhead view of a tile-roof home and its fenced backyard', height: 1200 },
+      { file: 'drone-aerial-16.jpg', alt: 'Overhead view of red tile roofs and neighboring driveways', height: 1200 },
     ],
   },
   {
@@ -133,7 +145,7 @@ const Photography = () => {
                     loading={photo.priority ? 'eager' : 'lazy'}
                     decoding="async"
                     width="1600"
-                    height={photo.file === 'cars-coffee-rolls-royce.jpg' ? '1301' : '1066'}
+                    height={photo.height ?? (photo.file === 'cars-coffee-rolls-royce.jpg' ? 1301 : 1066)}
                   />
                   </button>
                 </figure>
