@@ -76,7 +76,29 @@ const photoCollections = [
   },
 ];
 
+const photoUrl = (file: string) =>
+  '/Images/Photography/web/' + file.replace(/\.[^.]+$/, '.jpg');
+
 const Photography = () => {
+  const dialog = React.useRef<HTMLDialogElement>(null);
+  const trigger = React.useRef<HTMLButtonElement | null>(null);
+  const swipe = React.useRef<{ x: number; y: number } | null>(null);
+  const [collection, setCollection] = React.useState(photoCollections[0]);
+  const [index, setIndex] = React.useState(0);
+
+  function openGallery(group: typeof collection, photo: number, button: HTMLButtonElement) {
+    trigger.current = button;
+    setCollection(group);
+    setIndex(photo);
+    dialog.current?.showModal();
+  }
+
+  function move(offset: number) {
+    setIndex(current => (current + offset + collection.photos.length) % collection.photos.length);
+  }
+
+  const activePhoto = collection.photos[index] ?? collection.photos[0];
+
   return (
     <main className={styles.wrapper}>
       <div className={styles.container}>
@@ -92,13 +114,20 @@ const Photography = () => {
           <section className={styles.photoSection} key={collection.title}>
             <div className={styles.sectionHeading}>
               <h2>{collection.title}</h2>
+              <button type="button" className={styles.galleryButton}
+                onClick={event => openGallery(collection, 0, event.currentTarget)}>
+                View gallery · {collection.photos.length} photos
+              </button>
               <p>{collection.description}</p>
             </div>
             <div className={styles.gallery}>
-              {collection.photos.map((photo) => (
+              {collection.photos.slice(0, 3).map((photo, photoIndex) => (
                 <figure className={`${styles.glassCard} animate__animated animate__fadeInUp`} key={photo.file}>
+                  <button type="button" className={styles.previewButton}
+                    aria-label={`Enlarge: ${photo.alt}`}
+                    onClick={event => openGallery(collection, photoIndex, event.currentTarget)}>
                   <img
-                    src={`/Images/Photography/web/${photo.file.replace(/\.[^.]+$/, '.jpg')}`}
+                    src={photoUrl(photo.file)}
                     alt={photo.alt}
                     className={styles.galleryImage}
                     loading={photo.priority ? 'eager' : 'lazy'}
@@ -106,6 +135,7 @@ const Photography = () => {
                     width="1600"
                     height={photo.file === 'cars-coffee-rolls-royce.jpg' ? '1301' : '1066'}
                   />
+                  </button>
                 </figure>
               ))}
             </div>
@@ -118,6 +148,48 @@ const Photography = () => {
           <Link to="/contact" className={styles.ctaButton}>Start Your Project</Link>
         </section>
       </div>
+      <dialog ref={dialog} className={styles.viewer} aria-labelledby="gallery-title"
+        onClose={() => trigger.current?.focus({ preventScroll: true })}
+        onKeyDown={event => {
+          if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+            event.preventDefault();
+            move(event.key === 'ArrowLeft' ? -1 : 1);
+          }
+        }}>
+        <header className={styles.viewerHeader}>
+          <h2 id="gallery-title">{collection.title}</h2>
+          <button type="button" autoFocus onClick={() => dialog.current?.close()}>Close ×</button>
+        </header>
+        <div className={styles.stage}
+          onTouchStart={event => {
+            const touch = event.touches[0];
+            swipe.current = event.touches.length === 1 ? { x: touch.clientX, y: touch.clientY } : null;
+          }}
+          onTouchCancel={() => { swipe.current = null; }}
+          onTouchEnd={event => {
+            const start = swipe.current;
+            swipe.current = null;
+            if (!start) return;
+            const touch = event.changedTouches[0];
+            const dx = touch.clientX - start.x;
+            if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(touch.clientY - start.y)) {
+              move(dx < 0 ? 1 : -1);
+            }
+          }}>
+          <img src={photoUrl(activePhoto.file)} alt={activePhoto.alt} draggable={false} />
+          <button type="button" aria-label="Previous photo" onClick={() => move(-1)}>‹</button>
+          <button type="button" aria-label="Next photo" onClick={() => move(1)}>›</button>
+        </div>
+        <p className={styles.counter} aria-live="polite">{index + 1} / {collection.photos.length}</p>
+        <div className={styles.thumbnails} aria-label="Gallery thumbnails">
+          {collection.photos.map((photo, position) => (
+            <button type="button" key={photo.file} aria-label={`Photo ${position + 1}: ${photo.alt}`}
+              aria-pressed={position === index} onClick={() => setIndex(position)}>
+              <img src={photoUrl(photo.file)} alt="" loading="lazy" />
+            </button>
+          ))}
+        </div>
+      </dialog>
     </main>
   );
 };

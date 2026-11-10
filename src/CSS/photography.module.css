@@ -166,3 +166,54 @@
   .wrapper h1 { letter-spacing: 0.1em; }
   .wrapper h2, .wrapper h3 { letter-spacing: 0.06em; }
 }
+
+.galleryButton,
+.viewer button {
+  border: 1px solid #8b795c;
+  border-radius: 6px;
+  background: #15171b;
+  color: #f5eee3;
+  min-height: 44px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.galleryButton { margin-top: 14px; }
+.previewButton {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+.previewButton:focus-visible { outline: 3px solid var(--brand-gold); outline-offset: -4px; }
+
+.viewer {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  padding: clamp(12px, 3vw, 28px);
+  background: #0a0c0e;
+  color: #f5eee3;
+}
+.viewer[open] { display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; gap: 10px; }
+:global(body):has(.viewer[open]) { overflow: hidden; }
+.viewerHeader { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.viewerHeader h2 { font-size: clamp(1rem, 3vw, 1.5rem); margin: 0; }
+.viewerHeader button { white-space: nowrap; }
+.stage { position: relative; min-height: 0; touch-action: pan-y pinch-zoom; }
+.stage img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.stage button { position: absolute; top: 50%; transform: translateY(-50%); font-size: 1.5rem; }
+.stage button:first-of-type { left: 0; }
+.stage button:last-of-type { right: 0; }
+.counter { text-align: center; margin: 0; }
+.thumbnails { display: flex; gap: 6px; overflow-x: auto; padding: 4px; }
+.thumbnails button { flex: none; padding: 3px; }
+.thumbnails button[aria-pressed='true'] { border-color: var(--brand-gold); }
+.thumbnails img { display: block; width: 50px; height: 36px; object-fit: cover; }
