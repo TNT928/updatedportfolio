@@ -51,6 +51,21 @@ const photoCollections: { title: string; description: string; photos: { file: st
     ],
   },
   {
+    title: 'Events & Fashion',
+    description: 'Portraits, celebrations, and behind-the-scenes moments from the Rich Reporter one-year anniversary.',
+    photos: [
+      { file: 'rich-reporter-red-carpet-portrait.jpg', alt: 'Guest wearing a crown and Mrs. U.S.A. sash at the Rich Reporter anniversary celebration' },
+      { file: 'rich-reporter-fashion-jet-portrait.jpg', alt: 'Fashion portrait in a textured white outfit beside a private jet' },
+      { file: 'rich-reporter-anniversary-group.jpg', alt: 'Guests posing together at the Rich Reporter anniversary backdrop' },
+      { file: 'rich-reporter-anniversary-gatland.jpg', alt: 'Four guests posing beside a floral Gatlan display at the Rich Reporter anniversary celebration' },
+      { file: 'rich-reporter-backstage-portrait.jpg', alt: 'Backstage portrait of a model seated among fashion show outfits' },
+      { file: 'rich-reporter-backstage-makeup.jpg', alt: 'Model preparing backstage with the makeup team and clothing racks' },
+      { file: 'rich-reporter-fashion-jet-detail.jpg', alt: 'Fashion portrait showing the textured back of a white outfit beside a private jet' },
+      { file: 'rich-reporter-anniversary-selfie.jpg', alt: 'Two guests taking a selfie at the Rich Reporter anniversary celebration' },
+      { file: 'rich-reporter-backstage-hair.jpg', alt: 'Hairstylist preparing a model backstage before the fashion show' },
+    ],
+  },
+  {
     title: 'Portraits & People',
     description: 'Professional headshots and relaxed environmental portraits that help people and personalities stand out.',
     photos: [
