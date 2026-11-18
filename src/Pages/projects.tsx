@@ -7,6 +7,14 @@ const bunny = 'https://vanderloonmedia.b-cdn.net/';
 
 const projects = [
   {
+    name: 'Rich Magazine Social Reel',
+    category: 'Events · Social Media',
+    description: 'A vertical video edit for Rich Magazine, formatted for mobile viewing and Facebook.',
+    file: 'Rich%20Magazine%20Facebook%20Edit.mp4',
+    poster: 'Thumbnails/Screenshot%202026-11-18%20at%204.01.18%E2%80%AFPM.png',
+    orientation: 'portrait',
+  },
+  {
     name: 'Fort Lauderdale 90s Vibe',
     category: 'Lifestyle · Creative Editing',
     description: 'Fort Lauderdale Beach with a nostalgic 90s home-video look, featuring custom Apple Motion effects, analog texture, and classic 4:3 framing.',
