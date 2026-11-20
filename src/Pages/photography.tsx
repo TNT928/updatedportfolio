@@ -50,6 +50,9 @@ const photoCollections: { title: string; description: string; photos: { file: st
     title: 'Drone & Aerial',
     description: 'See how a property sits within its surroundings, from overhead details to wide neighborhood views.',
     photos: [
+      { file: 'reflections-park-flooding-25.jpg', alt: 'Wide aerial view of floodwater covering Reflections Park in Davie, Florida', height: 1200 },
+      { file: 'reflections-park-flooding-26.jpg', alt: 'Drone view of floodwater surrounding a playground and walking path at Reflections Park', height: 1200 },
+      { file: 'reflections-park-flooding-27.jpg', alt: 'Overhead view of blue playground canopies and a basketball court beside floodwater', height: 1200 },
       { file: 'drone-aerial-21.jpg', alt: 'Wide aerial view of homes surrounding a lake', height: 1200 },
       { file: 'drone-aerial-18.jpg', alt: 'Drone view along a residential street lined with tile-roof homes', height: 1200 },
       { file: 'drone-aerial-20.jpg', alt: 'Overhead view of neighboring homes with bright blue pools', height: 1200 },

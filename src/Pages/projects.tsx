@@ -7,6 +7,13 @@ const bunny = 'https://vanderloonmedia.b-cdn.net/';
 
 const projects = [
   {
+    name: 'Reflections Park Flooding',
+    category: 'Drone & Aerial',
+    description: 'Drone footage showing floodwater around the playground and across Reflections Park in Davie, Florida, after heavy rain.',
+    file: 'Reflections%20Park%20Flooding.mp4',
+    poster: 'Thumbnails/Screenshot%202026-11-20%20at%209.46.04%E2%80%AFAM.png',
+  },
+  {
     name: 'Rich Magazine Social Reel',
     category: 'Events · Social Media',
     description: 'A vertical video edit for Rich Magazine, formatted for mobile viewing and Facebook.',
